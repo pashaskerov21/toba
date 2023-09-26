@@ -1,0 +1,109 @@
+footer {
+    width: 100%;
+    @include column-center;
+    background-color: var(--bg-color-3);
+
+    .footer-top {
+        width: 100%;
+        padding: 50px 0;
+
+        .container {
+            @include row-center;
+        }
+
+        .links-row {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            place-items: center;
+            gap: 30px;
+
+            @media (min-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (min-width: 992px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-links {
+                width: 100%;
+                @include column-center;
+
+                @media (min-width: 768px) {
+                    height: 100%;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                }
+
+                a {
+                    text-transform: capitalize;
+                    margin-bottom: 10px;
+                    font-weight: 500;
+                    color: var(--text-color-1);
+
+                    &:hover {
+                        color: var(--color-1);
+                        transform: translateX(10px);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        width: 100%;
+
+
+        .container {
+            @include row-center;
+            border-top: 3px solid #e1e1e1;
+            padding: 30px 12px;
+
+            .inner {
+                width: 100%;
+                @include column-center;
+
+                @media (min-width: 768px) {
+                    @include row-between;
+                }
+
+                .logo {
+                    margin-bottom: 20px;
+
+                    @media (min-width: 768px) {
+                        margin-bottom: 0;
+                    }
+
+                    img {
+                        max-width: 150px;
+                        max-height: 50px;
+                    }
+                }
+
+                .copyright {
+                    color: #acb1c4;
+                    margin-bottom: 20px;
+                    text-align: center;
+
+                    @media (min-width: 768px) {
+                        margin-bottom: 0;
+                        padding: 0 40px;
+                    }
+                }
+
+                .social-icons {
+                    @include row-center;
+
+                    a {
+                        margin-right: 12px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

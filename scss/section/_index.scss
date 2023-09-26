@@ -1,0 +1,9 @@
+section{
+    &.banner-section{
+        @include make-section(0,0,40px);
+    }
+}
+
+
+
+@import 'banner'; 

@@ -1,0 +1,16 @@
+@import 'root';
+@import 'mixin';
+@import 'basic';
+
+// helpers
+@import 'helpers/index';
+// components
+@import 'components/index';
+
+
+// header
+@import 'partials/header/index';
+// footer
+@import 'partials/footer/footer';
+
+@import 'section/index'

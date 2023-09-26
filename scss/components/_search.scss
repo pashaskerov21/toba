@@ -1,0 +1,136 @@
+// .search-middle{
+//     $max-width: 350px;
+//     $max-width-lg: 450px;
+//     $max-width-xxl: 560px;
+//     $min-height: 30px;
+//     $min-height-lg: 50px;
+//     $min-height-xxl: 56px;
+//     $bg-color: #541AA6;
+//     $border-radius: 5px;
+//     $input-color: #C7A2FB;
+//     $input-fonst-size: 16px;
+
+
+//     width: 100%;
+//     max-width: $max-width;
+//     min-height: $min-height;
+//     background-color: $bg-color;
+//     border-radius: $border-radius;
+//     position: relative;
+//     @include row-center;
+//     @media (min-width: 992px){
+//         max-width: $max-width-lg;
+//         min-height: $min-height-lg;
+//     }
+//     @media (min-width: 1400px){
+//         max-width: $max-width-xxl;
+//         min-height: $min-height-xxl;
+//         padding: 0 15px;
+//     }
+//     form{
+//         width: 100%;
+//         position: relative;
+//         input{
+//             width: 100%;
+//             padding: 12px;
+//             background-color: transparent;
+//             border: none;
+//             color: $input-color;
+//             font-size: $input-fonst-size;
+//             padding-right: 30px;
+//             &::placeholder{
+//                 color: $input-color;
+//                 font-size: $input-fonst-size;
+//             }
+//         }
+//         button{
+//             position: absolute;
+//             top: 50%;
+//             right: 10px;
+//             transform: translateY(-50%);
+//             background-color: $bg-color;
+//             cursor: pointer;
+//         }
+//     }
+
+// }
+
+
+.search {
+    $form-bg-color: #541AA6;
+    $input-color: #C7A2FB;
+    $input-fonst-size: 16px;
+
+    position: absolute;
+    top: -100%;
+    opacity: 1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color-1);
+    @include row-center;
+    z-index: 100;
+    padding: 0 15px;
+    transition: all 0.3s;
+    &.active{
+        top: 0;
+        opacity: 1;
+    }
+    @media (min-width: 992px){
+        position: relative;
+        top: 0;
+        opacity: 1;
+        max-width: 400px;
+        z-index: 1;
+    }
+    @media (min-width: 1200px){
+        max-width: 560px;
+    }
+
+    .close-button {
+        transform: scale(1.4);
+        margin-left: 15px;
+        min-width: 25px;
+        min-height: 25px;
+        @include row-center;
+        border-radius: 5px;
+        border: 1px solid var(--white);
+        @media (min-width: 992px){
+            display: none;
+        }
+    }
+
+    form {
+        width: 100%;
+        max-width: 540px;
+        background-color: $form-bg-color;
+        position: relative;
+        border-radius: 5px;
+        @media (min-width: 1200px){
+            min-height: 56px;
+            @include row-center;
+        }
+        input {
+            border: none;
+            background-color: transparent;
+            width: 100%;
+            padding: 12px;
+            color: $input-color;
+            font-size: $input-fonst-size;
+            padding-right: 30px;
+            &::placeholder{
+                color: $input-color;
+                font-size: $input-fonst-size;
+            }
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background-color: $form-bg-color;
+            cursor: pointer;
+        }
+    }
+}

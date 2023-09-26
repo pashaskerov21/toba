@@ -1,0 +1,16 @@
+header{
+    width: 100%;
+    position: relative;
+    nav{
+        width: 100%;
+        z-index: 999;
+        .inner{
+            width: 100%;
+            @include row-between;
+        }
+    }
+}
+
+// nav
+@import 'nav/top';
+@import 'nav/bottom';

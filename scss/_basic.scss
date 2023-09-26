@@ -1,0 +1,102 @@
+// parameters
+$body-font-size: 16px;
+$body-font-family: var(--general-font);
+$transition-duration: 0.3s;
+$selection-bg: var(--bg-color-1);
+$selection-color: var(--white);
+$scrollbar-width: 7px;
+$scrollbar-height: 7px;
+$scrollbar-radius: 0;
+$scrollbar-thumb-bg: var(--bg-color-1);
+$scrollbar-track-bg: var(--white);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    @include column-between;
+    font-size: $body-font-size;
+    font-family: $body-font-family;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: $scrollbar-width;
+    height: $scrollbar-height;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb-bg;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $scrollbar-track-bg;
+}
+
+::selection {
+    background: $selection-bg;
+    color: $selection-color;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    background-color: transparent;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    user-select: none;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    transition: all $transition-duration;
+}
+a{
+    transition: all $transition-duration;
+}
+
+input {
+    outline: none;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        display: none;
+    }
+}
+
+main{
+    width: 100%;
+    min-height: 60vh;
+}
+.swiper{
+    width: 100%;
+    z-index: 0;
+}

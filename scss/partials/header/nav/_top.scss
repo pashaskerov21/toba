@@ -1,0 +1,110 @@
+nav.top-nav {
+    $bg-color: var(--bg-color-1);
+    $padding-y: 12px;
+    $logo-width-sm: 80px;
+    $logo-width-md: 120px;
+    $logo-width-lg: 160px;
+    $logo-width-xxl: 200px;
+
+    $min-height-sm: 70px;
+    $min-height-md: 80px;
+    $min-height-lg: 100px;
+    $min-height-xl: 120px;
+
+
+
+    background-color: $bg-color;
+    padding: $padding-y 0;
+    min-height: $min-height-sm;
+    @include row-center;
+    
+
+    @media (min-width: 768px) {
+        min-height: $min-height-md;
+    }
+
+    @media (min-width: 992px) {
+        min-height: $min-height-lg;
+    }
+
+    @media (min-width: 1200px) {
+        min-height: $min-height-xl;
+    }
+
+    .logo {
+        width: 100%;
+        max-width: $logo-width-sm;
+
+        @media (min-width: 768px) {
+            max-width: $logo-width-md;
+        }
+
+        @media (min-width: 992px) {
+            max-width: $logo-width-lg;
+        }
+
+        @media (min-width: 1400px) {
+            max-width: $logo-width-xxl;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .right {
+        @include row-justify-end;
+
+        .phone-link {
+            @include row-justify-start;
+            color: var(--white);
+            font-size: 16px;
+
+            @media (min-width: 768px) {
+                margin-right: 25px;
+            }
+
+            @media (min-width: 1400px) {
+                font-size: 20px;
+                margin-right: 35px;
+            }
+
+            img {
+                width: 17px;
+                height: 17px;
+                margin-right: 5px;
+                object-fit: contain;
+
+                @media (min-width: 768px) {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+        }
+
+        .mobile-icons {
+            @include row-justify-end;
+
+            button {
+                &:last-child {
+                    margin-right: 0;
+                }
+                &.search-button {
+                    margin-top: -2px;
+                    @include row-center;
+                    margin-right: 7px;
+                    @media (min-width: 768px){
+                        transform: scale(1.2);
+                        margin-right: 15px;
+                    }
+
+                    &:hover {
+                        color: var(--bg-color-2);
+                    }
+                }
+            }
+        }
+    }
+}
