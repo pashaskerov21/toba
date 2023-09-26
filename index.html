@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 
 <head>
     <meta charset="UTF-8">
@@ -7,14 +7,24 @@
     <title>TOBA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="preload" href="js/script.js" as="script">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> 
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+
+    <div id="preloader">
+        <div class="loader">
+            <div class="logo">
+                <img src="images/logo/logo-2.svg" width="150" height="150" alt="">
+            </div>
+        </div>
+    </div>
 
     <div class="general-icons-mobile d-xl-none">
         <a href="#" class="icon">
@@ -410,14 +420,17 @@
     </header>
 
     <main>
-        <section class="banner-section">
+        <section class="banner">
             <div class="swiper banner-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="banner-slide">
                             <img src="images/banner/banner-1.jpg" width="100" height="100" alt="">
                             <div class="content">
-                                <h1 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
+                                <h3 class="title">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry.
+                                </h3>
                                 <a href="#" class="detail-btn">ətraflı</a>
                             </div>
                         </div>
@@ -426,8 +439,227 @@
                         <div class="banner-slide">
                             <img src="images/banner/banner-1.jpg" width="100" height="100" alt="">
                             <div class="content">
-                                <h1 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
+                                <h3 class="title">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry.
+                                </h3>
                                 <a href="#" class="detail-btn">ətraflı</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="category-cards">
+            <div class="container">
+                <div class="swiper category-card-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="category-card" style="background: url('images/category/design/img-1.png') #965BEA;">
+                                <div class="image">
+                                    <img src="images/category/card-images/img-1.png" width="100" height="100" alt="">
+                                </div>
+                                <h3 class="title">velosipedlər</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="category-card" style="background: url('images/category/design/img-2.png') #90A8E3;">
+                                <div class="image">
+                                    <img src="images/category/card-images/img-2.png" width="100" height="100" alt="">
+                                </div>
+                                <h3 class="title">velosiped avadanlıqları</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="category-card" style="background: url('images/category/design/img-3.png') #4289F3;">
+                                <div class="image">
+                                    <img src="images/category/card-images/img-3.png" width="100" height="100" alt="">
+                                </div>
+                                <h3 class="title">təkərlər</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="category-card" style="background: url('images/category/design/img-4.png') #C1EA6E;">
+                                <div class="image">
+                                    <img src="images/category/card-images/img-4.png" width="100" height="100" alt="">
+                                </div>
+                                <h3 class="title">su üçün qablar</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="category-card" style="background: url('images/category/design/img-5.png') #588F46;">
+                                <div class="image">
+                                    <img src="images/category/card-images/img-5.png" width="100" height="100" alt="">
+                                </div>
+                                <h3 class="title">velosiped zəncirləri</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="category-card" style="background: url('images/category/design/img-6.png') #FADB62;">
+                                <div class="image">
+                                    <img src="images/category/card-images/img-6.png" width="100" height="100" alt="">
+                                </div>
+                                <h3 class="title">geyim 1</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="category-card" style="background: url('images/category/design/img-7.png') #5A675B;">
+                                <div class="image">
+                                    <img src="images/category/card-images/img-7.png" width="100" height="100" alt="">
+                                </div>
+                                <h3 class="title">kaska</h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="category-card" style="background: url('images/category/design/img-8.png') #394E70;">
+                                <div class="image">
+                                    <img src="images/category/card-images/img-8.png" width="100" height="100" alt="">
+                                </div>
+                                <h3 class="title">geyim 2</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <div class="swiper partner-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="partner-logo">
+                                <img src="images/partners/logo-1.png" width="200" height="60" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="partner-logo">
+                                <img src="images/partners/logo-2.png" width="200" height="60" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="partner-logo">
+                                <img src="images/partners/logo-3.png" width="200" height="60" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="partner-logo">
+                                <img src="images/partners/logo-4.png" width="200" height="60" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="partner-logo">
+                                <img src="images/partners/logo-5.png" width="200" height="60" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="partner-logo">
+                                <img src="images/partners/logo-6.png" width="200" height="60" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <div class="services-wrapper">
+                    <a href="#" class="service-cart bg-left" style="background-image: url('images/services/design/img-1.png'); background-color: #DCCAB0;">
+                        <div class="content">
+                            <h1 class="title">velosipedlərin təmiri</h1>
+                            <div class="text">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/services/main/img-1.png" width="100" height="100" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="service-cart bg-cover" style="background-image: url('images/services/design/img-2.png'); background-color: #FADB62;">
+                        <div class="content">
+                            <h1 class="title">çatdırılma</h1>
+                            <div class="text">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/services/main/img-2.png" width="100" height="100" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="service-cart bg-cover" style="background-image: url('images/services/design/img-3.png'); background-color: #F4B140;">
+                        <div class="content">
+                            <h1 class="title">hissə-hissə ödəniş</h1>
+                            <div class="text">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/services/main/img-3.png" width="100" height="100" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="service-cart bg-right" style="background-image: url('images/services/design/img-4.png'); background-color: #A5BEC7;">
+                        <div class="content">
+                            <h1 class="title">velosipedlərin icarəsi</h1>
+                            <div class="text">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/services/main/img-4.png" width="100" height="100" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="products">
+            <div class="container">
+                <div class="swiper products-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-card discount">
+                                <div class="image">
+                                    <img src="images/product/cart/img-1.png" width="200" height="200" alt="product"/>
+                                    <div class="hover">
+                                        <a href="#" class="detail-btn">ətraflı</a>
+                                    </div>
+                                </div>
+                                <div class="information">
+                                    <span class="code">AH3647Z</span>
+                                    <a href="#" class="name">ultra 1 velosiped</a>
+                                    <div class="price">
+                                        <span class="old">2100 &#8380;</span>
+                                        <span class="new">1900 &#x20BC;</span>
+                                    </div>
+                                </div>
+                                <div class="buttons">
+                                    <div class="inner">
+                                        <div class="basket-button card-btn active">
+                                            <div class="icon">
+                                                <img src="images/icon/cart/basket.svg" alt="">
+                                                <img src="images/icon/cart/basket-white.svg" alt="">
+                                            </div>
+                                            <span>səbətə at</span>
+                                        </div>
+                                        <div class="compare-button card-btn active">
+                                            <div class="icon">
+                                                <img src="images/icon/cart/compare.svg" alt="">
+                                                <img src="images/icon/cart/compare-white.svg" alt="">
+                                            </div>
+                                            <span>müqayisə et</span>
+                                        </div>
+                                        <div class="favorite-button card-btn active">
+                                            <img src="images/icon/cart/heart.svg" alt="">
+                                            <img src="images/icon/cart/heart-full.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -483,7 +715,8 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
     <script src="js/script.js" defer></script>
     <script src="js/swiper.js" defer></script>

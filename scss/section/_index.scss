@@ -1,9 +1,25 @@
 section{
-    &.banner-section{
+    &.banner{
         @include make-section(0,0,40px);
+    }
+    &.category-cards{
+        @include make-section(0,40px,40px);
+    }
+    &.partners{
+        @include make-section(0,40px,40px);
+    }
+    &.services{
+        @include make-section(0,40px,40px);
+    }
+    &.products{
+        @include make-section(0,40px,40px);
     }
 }
 
 
 
 @import 'banner'; 
+@import 'category-cards'; 
+@import 'partners';
+@import 'services';
+@import 'products';

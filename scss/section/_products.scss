@@ -1,0 +1,10 @@
+section.products{
+    
+    .products-swiper{
+        overflow: visible;
+        .swiper-slide{
+            @include row-center;
+            overflow: visible;
+        }
+    }
+}

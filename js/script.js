@@ -1,3 +1,8 @@
+$(window).on('load', function() {
+    $('#preloader').fadeOut('slow');
+});
+
+
 document.addEventListener('DOMContentLoaded', function () {
     $(document).ready(function () {
 

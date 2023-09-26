@@ -1,6 +1,6 @@
 @mixin make-section($padding-x: 0, $padding-y: 0, $mb: 0){
     width: 100%;
-    padding: $padding-x $padding-y;
+    padding: $padding-y $padding-x;
     margin-bottom: $mb;
     position: relative;
 }
