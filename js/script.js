@@ -136,6 +136,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // sort filter
         $('.sort-filter .title').click(function(){
             $(this).parent('.sort-filter').find('.menu').toggleClass('d-none')
+            if($(this).parent('.sort-filter').find('.menu').hasClass('d-none')){
+                $(this).parent('.sort-filter').find('.menu').addClass('d-none')
+            }else{
+                $(this).parent('.sort-filter').find('.menu').removeClassx('d-none')
+            }
         })
         $('.sort-filter').hover(function(){
             $(this).find('.menu').removeClass('d-none')

@@ -1,7 +1,7 @@
 section.products{
     
     .products-swiper{
-        overflow: visible;
+        overflow-y: visible;
         z-index: 0;
         .swiper-slide{
             @include row-center;

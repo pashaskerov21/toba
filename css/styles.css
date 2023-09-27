@@ -507,7 +507,7 @@ main {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  z-index: 99;
+  z-index: 99999;
   width: 65px;
 }
 .general-icons.mobile a {
@@ -1125,7 +1125,7 @@ footer .footer-bottom .container .inner .social-icons a:last-child {
   justify-content: flex-start;
   align-items: center;
   z-index: 1;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .product-card .content {
   width: 100%;
@@ -1278,6 +1278,9 @@ footer .footer-bottom .container .inner .social-icons a:last-child {
 .product-card.discount .information .price .old {
   display: inline-block;
 }
+.product-card.card-xl {
+  max-width: 450px;
+}
 .product-card:hover {
   box-shadow: 0px 4px 20px rgba(50, 50, 50, 0.2);
   z-index: 100;
@@ -1298,7 +1301,7 @@ footer .footer-bottom .container .inner .social-icons a:last-child {
   left: 0;
   min-height: 110px;
   background-color: var(--white);
-  box-shadow: 0px 27px 20px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px 3px 20px rgba(50, 50, 50, 0.2);
   padding: 0 10px 10px;
   grid-template-areas: "compare compare favorite" "basket basket basket";
 }
@@ -1569,11 +1572,11 @@ footer .footer-bottom .container .inner .social-icons a:last-child {
   position: relative;
   cursor: pointer;
   background-color: #f9f9f9;
-  max-width: 220px;
 }
 @media (min-width: 992px) {
   .sort-filters .sort-filter {
     border-right: 1px solid #efefef;
+    max-width: 220px;
   }
 }
 .sort-filters .sort-filter .title {
@@ -1594,7 +1597,6 @@ footer .footer-bottom .container .inner .social-icons a:last-child {
   top: 100%;
   left: 0;
   width: 100%;
-  padding: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1615,6 +1617,7 @@ footer .footer-bottom .container .inner .social-icons a:last-child {
   margin-bottom: 10px;
   position: relative;
   cursor: pointer;
+  padding: 12px;
 }
 .sort-filters .sort-filter .menu .option input {
   position: absolute;
@@ -1625,8 +1628,9 @@ footer .footer-bottom .container .inner .social-icons a:last-child {
   opacity: 0;
   cursor: pointer;
 }
-.sort-filters .sort-filter .menu .option:hover label {
-  color: var(--color-1);
+.sort-filters .sort-filter .menu .option:hover {
+  background-color: var(--color-1);
+  color: var(--white);
 }
 .sort-filters .sort-filter .menu .option:last-child {
   margin-bottom: 0;
@@ -1900,7 +1904,7 @@ section.services .services-wrapper .service-cart.bg-cover {
 }
 
 section.products .products-swiper {
-  overflow: visible;
+  overflow-y: visible;
   z-index: 0;
 }
 section.products .products-swiper .swiper-slide {
@@ -1925,6 +1929,7 @@ section.products .products-swiper .swiper-slide {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    align-items: flex-start;
   }
 }
 .products-general-wrapper .left {
@@ -1974,4 +1979,53 @@ section.products .products-swiper .swiper-slide {
 .products-general-wrapper .filters-show-btn img {
   margin-right: 5px;
   display: block;
+}
+.products-general-wrapper .products-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  gap: 30px;
+  padding: 40px 0;
+}
+@media (min-width: 768px) {
+  .products-general-wrapper .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1400px) {
+  .products-general-wrapper .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.products-general-wrapper .product-pagination {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.products-general-wrapper .product-pagination a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-1);
+  border-radius: 5px;
+  color: var(--color-1);
+  margin-right: 5px;
+  font-weight: 500;
+}
+.products-general-wrapper .product-pagination a:last-child {
+  margin-right: 0;
+}
+.products-general-wrapper .product-pagination a.active {
+  background-color: var(--bg-color-1);
+  color: var(--white);
+}
+.products-general-wrapper .product-pagination a:hover {
+  background-color: var(--bg-color-1);
+  color: var(--white);
 }/*# sourceMappingURL=styles.css.map */

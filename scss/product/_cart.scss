@@ -12,7 +12,7 @@
     padding-top: $card-padding-x;
     @include column-justify-start;
     z-index: 1;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     .content{
         width: 100%;
         padding: 0 $card-padding-x;
@@ -156,6 +156,9 @@
             }
         }
     }
+    &.card-xl{
+        max-width: 450px;
+    }
     &:hover{
         box-shadow: 0px 4px 20px rgba(50,50,50,0.2);
         z-index: 100;
@@ -176,7 +179,7 @@
                 left: 0;
                 min-height: 110px;
                 background-color: var(--white);
-                box-shadow: 0px 27px 20px rgba(50,50,50,0.2);
+                box-shadow: 0px 3px 20px rgba(50,50,50,0.2);
                 padding: 0 $card-padding-x $card-padding-x;
                 grid-template-areas: 
                 

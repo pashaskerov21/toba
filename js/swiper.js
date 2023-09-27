@@ -79,6 +79,14 @@ const productSwiper = new Swiper('.products-swiper', {
             spaceBetween: 20,
         },
         992: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            grid: {
+                fill: 'row',
+                rows: 2,
+            },
+        },
+        1200: {
             slidesPerView: 3,
             spaceBetween: 20,
             grid: {
