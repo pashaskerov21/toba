@@ -29,25 +29,28 @@
         }
     }
 
-    &-mobile{
+    &.mobile{
         position: fixed;
         @include column-align-start;
         top: 50%;
         right: 0;
         transform: translateY(-50%);
         z-index: 99;
+        width: 65px;
         a{
+            display: block;
             margin-bottom: 10px;
-            width: 70px;
+            width: 100%;
             box-shadow: 0 0 5px var(--black-5);
             padding: 10px;
             border-radius: 5px 0 0 5px;
             position: relative;
             background-color: var(--bg-color-1);
+            margin-right: 0;
             .badge{
                 position: absolute;
                 top: 7px;
-                right: 7px;
+                right: 22px;
                 font-size: 12px;
                 width: 20px;
                 height: 20px;

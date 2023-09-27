@@ -1,0 +1,31 @@
+.color-filter{
+    width: 100%;
+    @include row-justify-start;
+    flex-wrap: wrap;
+    input[type="checkbox"]{
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: attr(data-color);
+        position: relative;
+        border: 1px solid transparent;
+        margin: 10px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(1.5);
+            width: 100%;
+            height: 100%;
+            border: 1px solid transparent;
+            border-radius: 50%;
+        }
+        &:checked{
+            &::before{
+                border-color: #838383;
+            }
+        }
+    }
+}

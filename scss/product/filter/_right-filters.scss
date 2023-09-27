@@ -1,0 +1,81 @@
+.filters-wrapper{
+    $header-bg: #EFEFEF;
+    $content-bg: #F9F9F9;
+    $padding-x: 15px;
+    $padding-y: 12px;
+
+
+    width: 100%;
+    @include column-justify-start;
+    .filter-item{
+        width: 100%;
+        @include column-center;
+        margin-bottom: 25px;
+        .header{
+            width: 100%;
+            background-color: $header-bg;
+            padding: $padding-y $padding-x;
+            border-radius: 5px 5px 0 0;
+            color: var(--text-color-3);
+            @include row-justify-start;
+            flex-wrap: wrap;
+            span{
+                margin-left: 7px;
+                color: #959595;
+            }
+            .title{
+                text-transform: capitalize;
+                font-weight: 500;
+            }
+        }
+        .content{
+            width: 100%;
+            background-color: $content-bg;
+            padding: $padding-y $padding-x;
+            border: 0 0 5px 5px;
+        }
+    }
+    .category-list{
+        width: 100%;
+        @include column-align-start;
+        a{
+            color: var(--text-color-3);
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 10px;
+            &:hover{
+                color: var(--color-1);
+            }
+        }
+    }
+    .buttons{
+        width: 100%;
+        @include row-between;
+        button{
+            width: 48%;
+            padding: 15px;
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 16px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 5px;
+        }
+        .submit{
+            background-color: var(--bg-color-1);
+            color: var(--white);
+            border-color: var(--color-1);
+            &:hover{
+                background-color: var(--white);
+                color: var(--color-1);
+            }
+
+        }
+        .reset{
+            &:hover{
+                background-color: #DB353A;
+                color: var(--white);
+            }
+        }
+    }
+}

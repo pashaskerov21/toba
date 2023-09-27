@@ -1,10 +1,18 @@
-$(window).on('load', function() {
+$(window).on('load', function () {
     $('#preloader').fadeOut('slow');
 });
 
 
 document.addEventListener('DOMContentLoaded', function () {
     $(document).ready(function () {
+
+        window.addEventListener('scroll', function () {
+            if (this.scrollY > 300) {
+                $('header .top-nav').addClass('fixed-top')
+            } else {
+                $('header .top-nav').removeClass('fixed-top')
+            }
+        })
 
         // menu
         $('.menu-button').click(function () {
@@ -43,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
 
-        $('header .category').hover(function(){
+        $('header .category').hover(function () {
             let categoryID = $(this).data('id');
             let activeSubcategory = $(`header .category .subcategories[data-category-id="${categoryID}"]`);
             if ($(this).hasClass('active')) {
@@ -55,9 +63,84 @@ document.addEventListener('DOMContentLoaded', function () {
                 $('header .category .subcategories').addClass('d-none');
                 activeSubcategory.removeClass('d-none');
             }
-        }, function(){
+        }, function () {
             $('header .category').removeClass('active');
             $('header .category .subcategories').addClass('d-none');
+        })
+
+
+        // product card button
+        $('.basket-button').click(function () {
+            $(this).toggleClass('active');
+            let badge = $('.general-icons .basket .badge');
+            let value = parseInt(badge.html());
+            if ($(this).hasClass('active')) {
+                value += 1;
+            } else {
+                value -= 1;
+            }
+            badge.html(value)
+        })
+        $('.compare-button').click(function () {
+            $(this).toggleClass('active')
+            let badge = $('.general-icons .compare .badge');
+            let value = parseInt(badge.html());
+            if ($(this).hasClass('active')) {
+                value += 1;
+            } else {
+                value -= 1;
+            }
+            badge.html(value)
+        })
+        $('.favorite-button').click(function () {
+            $(this).toggleClass('active')
+            let badge = $('.general-icons .wishlist .badge');
+            let value = parseInt(badge.html());
+            if ($(this).hasClass('active')) {
+                value += 1;
+            } else {
+                value -= 1;
+            }
+            badge.html(value)
+        })
+        $('.filters-show-btn').click(function () {
+            $('.filters-wrapper').toggleClass('d-none')
+        })
+
+
+        // price filter
+        let rangeInputs = $('.price-filter input[type="range"]');
+        let priceInputs = $('.price-filter input[type="number"]');
+
+        let minVal = parseInt(rangeInputs.eq(0).val());
+        let maxVal = parseInt(rangeInputs.eq(1).val());
+
+        priceInputs.eq(0).val(minVal);
+        priceInputs.eq(1).val(maxVal);
+
+        rangeInputs.on("input", function () {
+            let minVal = parseInt(rangeInputs.eq(0).val());
+            let maxVal = parseInt(rangeInputs.eq(1).val());
+
+            priceInputs.eq(0).val(minVal);
+            priceInputs.eq(1).val(maxVal);
+        });
+        priceInputs.on('input', function (){
+            let minVal = parseInt(priceInputs.eq(0).val());
+            let maxVal = parseInt(priceInputs.eq(1).val());
+
+            rangeInputs.eq(0).val(minVal);
+            rangeInputs.eq(1).val(maxVal);
+        })
+
+        // sort filter
+        $('.sort-filter .title').click(function(){
+            $(this).parent('.sort-filter').find('.menu').toggleClass('d-none')
+        })
+        $('.sort-filter').hover(function(){
+            $(this).find('.menu').removeClass('d-none')
+        }, function(){
+            $(this).find('.menu').addClass('d-none')
         })
     })
 })

@@ -2,9 +2,11 @@ section.products{
     
     .products-swiper{
         overflow: visible;
+        z-index: 0;
         .swiper-slide{
             @include row-center;
             overflow: visible;
+            z-index: 0;
         }
     }
 }

@@ -1,0 +1,29 @@
+.size-filter{
+    $checkbox-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+
+
+    width: 100%;
+    @include column-align-start;
+    .size-check{
+        width: 100%;
+        margin-bottom: 12px;
+        @include row-justify-start;
+        input[type="checkbox"]{
+            margin-right: 10px;
+            border: 1px solid var(--color-1) !important;
+            width: 18px;
+            height: 18px;
+            border-radius: 3px;
+            accent-color: var(--bg-color-1);
+            border: 1px solid var(--color-1) !important;
+            appearance: none;
+            &:checked{
+                background-color: var(--bg-color-1);
+                background-image: $checkbox-bg;
+            } 
+        }
+        label{
+            color: var(--text-color-3);
+        }
+    }
+}

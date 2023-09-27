@@ -1,0 +1,63 @@
+.price-filter{
+    width: 100%;
+    @include column-center;
+    padding: 12px 0;
+    .input-row{
+        width: 100%;
+        @include row-between;
+        input{
+            width: 45%;
+            height: 30px;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid var(--color-1);
+            color: var(--color-1);
+            font-weight: 500;
+            font-size: 17px;
+            &::placeholder{
+                color: #afafaf;
+                text-transform: capitalize;
+            }
+        }
+    }
+    .range-row{
+        width: 100%;
+        position: relative;
+        margin-top: 30px;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            transform: translateY(-50%);
+            background-color: var(--bg-color-1);
+            z-index: 1;
+            border-radius: 10px;
+        }
+        input{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            transform: translateY(-50%);
+            appearance: none;
+            pointer-events: none;
+            background-color: transparent;
+            z-index: 5;
+            &::-webkit-slider-thumb{
+                appearance: none;
+                -webkit-appearance: none;
+                pointer-events: auto;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: var(--bg-color-1);
+                &-active{
+                    background-color: var(--bg-color-2);
+                }
+            }
+        }
+    }
+}
