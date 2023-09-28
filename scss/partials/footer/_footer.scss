@@ -97,6 +97,7 @@ footer {
 
                     a {
                         margin-right: 12px;
+                        @include row-center;
 
                         &:last-child {
                             margin-right: 0;

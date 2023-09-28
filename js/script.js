@@ -1,9 +1,8 @@
-$(window).on('load', function () {
-    $('#preloader').fadeOut('slow');
-});
-
-
 document.addEventListener('DOMContentLoaded', function () {
+    $(window).on('load', function () {
+        $('#preloader').fadeOut('slow');
+    });
+
     $(document).ready(function () {
 
         window.addEventListener('scroll', function () {
@@ -125,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
             priceInputs.eq(0).val(minVal);
             priceInputs.eq(1).val(maxVal);
         });
-        priceInputs.on('input', function (){
+        priceInputs.on('input', function () {
             let minVal = parseInt(priceInputs.eq(0).val());
             let maxVal = parseInt(priceInputs.eq(1).val());
 
@@ -134,18 +133,41 @@ document.addEventListener('DOMContentLoaded', function () {
         })
 
         // sort filter
-        $('.sort-filter .title').click(function(){
+        $('.sort-filter .title').click(function () {
             $(this).parent('.sort-filter').find('.menu').toggleClass('d-none')
-            if($(this).parent('.sort-filter').find('.menu').hasClass('d-none')){
+            if ($(this).parent('.sort-filter').find('.menu').hasClass('d-none')) {
                 $(this).parent('.sort-filter').find('.menu').addClass('d-none')
-            }else{
+            } else {
                 $(this).parent('.sort-filter').find('.menu').removeClassx('d-none')
             }
         })
-        $('.sort-filter').hover(function(){
+        $('.sort-filter').hover(function () {
             $(this).find('.menu').removeClass('d-none')
-        }, function(){
+        }, function () {
             $(this).find('.menu').addClass('d-none')
+        })
+
+        $('.product-main-swiper .image').on('mousemove',function (e) {
+            $(this).addClass('zoom');
+            let zoomer = $(this);
+            let offsetX, offsetY, x, y;
+
+            if (e.offsetX !== undefined) {
+                offsetX = e.offsetX;
+                offsetY = e.offsetY;
+            } else if (e.touches && e.touches[0]) {
+                offsetX = e.touches[0].pageX - zoomer.offset().left;
+                offsetY = e.touches[0].pageY - zoomer.offset().top;
+            }
+
+            x = (offsetX / zoomer.width()) * 100;
+            y = (offsetY / zoomer.height()) * 100;
+
+            zoomer.css('background-position', x + '% ' + y + '%');
+        })
+        $('.product-main-swiper .image').on('mouseleave', function(){
+            $(this).removeClass('zoom');
+            $(this).css('background-position', 'center');
         })
     })
 })

@@ -17,6 +17,9 @@ section{
     &.products-page{
         @include make-section(0,40px,40px);
     }
+    &.product-detail{
+        @include make-section(0,40px,40px);
+    }
 }
 
 
@@ -27,3 +30,4 @@ section{
 @import 'services';
 @import 'products';
 @import 'products-page';
+@import 'product-detail';

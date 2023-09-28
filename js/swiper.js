@@ -104,3 +104,16 @@ const productSwiper = new Swiper('.products-swiper', {
         },
     }
 })
+
+const productThumbSwiper = new Swiper(".product-thumb-swiper", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var productMainSwiper = new Swiper(".product-main-swiper", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: productThumbSwiper,
+    },
+});
