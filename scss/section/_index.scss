@@ -29,6 +29,9 @@ section{
     &.wishlist{
         @include make-section(0,40px,40px);
     }
+    &.comparisons{
+        @include make-section(0,40px,40px);
+    }
 }
 
 

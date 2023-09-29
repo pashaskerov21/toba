@@ -5,6 +5,7 @@
   --bg-color-2: #FFF200;
   --bg-color-3: #F1F1F1;
   --bg-color-4: #F8F5CB;
+  --bg-color-5: #F2F2F2;
   --text-color-1: #373737;
   --text-color-2: #959595;
   --text-color-3: #303030;
@@ -2238,6 +2239,91 @@ footer .footer-bottom .container .inner .social-icons a:last-child {
   margin-bottom: 0;
 }
 
+.comparisons-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px 0 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.comparisons-wrapper .column {
+  min-width: 220px;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .comparisons-wrapper .column {
+    min-width: 240px;
+    max-width: 240px;
+  }
+}
+.comparisons-wrapper .column .image-td {
+  width: 95%;
+  height: 130px;
+  margin-bottom: 40px;
+}
+.comparisons-wrapper .column .image-td img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 20px;
+  display: block;
+}
+.comparisons-wrapper .column .parametr-list {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.comparisons-wrapper .column .parametr-list li {
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 400;
+  color: var(--text-color-1);
+  text-transform: capitalize;
+}
+.comparisons-wrapper .column .parametr-list li:nth-child(odd) {
+  background-color: var(--bg-color-5);
+}
+.comparisons-wrapper .column .delete-button {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #acb1c4;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s;
+}
+.comparisons-wrapper .column .delete-button:hover {
+  transform: scale(1.2);
+}
+.comparisons-wrapper .column.heading .parametr-list li {
+  font-weight: 500;
+}
+.comparisons-wrapper .column.product .parametr-list li {
+  justify-content: center;
+}
+
 section.banner {
   width: 100%;
   padding: 0 0;
@@ -2293,6 +2379,12 @@ section.similar-products {
   position: relative;
 }
 section.wishlist {
+  width: 100%;
+  padding: 40px 0;
+  margin-bottom: 40px;
+  position: relative;
+}
+section.comparisons {
   width: 100%;
   padding: 40px 0;
   margin-bottom: 40px;
