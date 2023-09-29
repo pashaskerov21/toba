@@ -20,6 +20,12 @@ section{
     &.product-detail{
         @include make-section(0,40px,40px);
     }
+    &.product-accessories{
+        @include make-section(0,40px,40px);
+    }
+    &.similar-products{
+        @include make-section(0,40px,40px);
+    }
 }
 
 
@@ -31,3 +37,4 @@ section{
 @import 'products';
 @import 'products-page';
 @import 'product-detail';
+@import 'product-accesories';

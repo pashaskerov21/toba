@@ -66,13 +66,9 @@ const categoryCardSwiper = new Swiper('.category-card-swiper', {
         },
     }
 })
-const productSwiper = new Swiper('.products-swiper', {
+
+const productGridSwiper = new Swiper('.products-swiper.grid-swiper', {
     slidesPerView: 1,
-    spaceBetween: 20,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
     breakpoints: {
         768: {
             slidesPerView: 2,
@@ -104,6 +100,23 @@ const productSwiper = new Swiper('.products-swiper', {
         },
     }
 })
+const productSwiper = new Swiper('.products-swiper.row-swiper', {
+    slidesPerView: 1,
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1400: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+    }
+})
 
 const productThumbSwiper = new Swiper(".product-thumb-swiper", {
     spaceBetween: 10,
@@ -117,3 +130,4 @@ var productMainSwiper = new Swiper(".product-main-swiper", {
         swiper: productThumbSwiper,
     },
 });
+

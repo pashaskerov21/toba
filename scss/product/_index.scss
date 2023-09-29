@@ -1,2 +1,19 @@
+$product-code-color: #ACB1C4;
+$product-name-color: var(--text-color-1);
+$product-old-price-color: #BDBCBE;
+$product-price-color: var(--color-1);
+
+.products-swiper{
+    overflow-y: visible;
+    z-index: 0;
+    .swiper-slide{
+        @include row-center;
+        overflow: visible;
+        z-index: 0;
+    }
+}
+
+
 @import 'cart';
+@import 'detail';
 @import 'filter/index';

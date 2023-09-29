@@ -169,5 +169,54 @@ document.addEventListener('DOMContentLoaded', function () {
             $(this).removeClass('zoom');
             $(this).css('background-position', 'center');
         })
+
+        //color checkbox in detail page
+        $(".product-check.usable").each(function () {
+            var checkbox = $(this).find("input[type='checkbox']");
+            
+            // Checkbox'un "checked" durumunu kontrol ediyoruz
+            if (checkbox.prop("checked")) {
+                $(this).addClass("active");
+            }
+        });
+
+        $('.product-check.usable').click(function(){
+            $(this).toggleClass('active');
+            var checkbox = $(this).find("input[type='checkbox']");
+            checkbox.prop("checked", !checkbox.prop("checked"));
+        })
+
+
+        // product amount
+        $('.product-amount button.decrement').click(function(){
+            let input = $(this).parent('.product-amount').find('input');
+            let value = parseInt(input.val());
+            if(value !== 1){
+                value -= 1;
+            }
+            input.val(value);
+        })
+        $('.product-amount button.increment').click(function(){
+            let input = $(this).parent('.product-amount').find('input');
+            let value = parseInt(input.val());
+            value += 1;
+            input.val(value);
+        })
+
+
+        // category buttons
+        let firstCategory = $('.product-category-buttons button:first-child');
+        let firstCategoryID = firstCategory.data('id');
+        firstCategory.addClass('active');
+        $('.products-swiper[data-category-id]').addClass('d-none')
+        $(`.products-swiper[data-category-id="${firstCategoryID}"]`).removeClass('d-none')
+        $('.product-category-buttons button').click(function(){
+            let id = $(this).data('id');
+            $('.product-category-buttons button').removeClass('active');
+            $(this).addClass('active');
+            $('.products-swiper[data-category-id]').addClass('d-none')
+            $(`.products-swiper[data-category-id="${id}"]`).removeClass('d-none')
+        })
+
     })
 })

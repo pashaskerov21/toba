@@ -5,6 +5,7 @@
     text-transform: capitalize;
     .title{
         color: var(--text-color-1);
+        margin-bottom: 5px;
         @media (min-width: 576px){
             margin-bottom: 10px;
         }
@@ -36,5 +37,21 @@
                 font-size: 18px;
             }
         }
+    }
+}
+
+.section-title{
+    font-weight: 500;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 20px;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 115px;
+        height: 4px;
+        background-color: var(--color-1);
     }
 }

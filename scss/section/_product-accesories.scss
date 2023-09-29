@@ -1,0 +1,23 @@
+.product-category-buttons {
+    width: 100%;
+    @include row-justify-start;
+    overflow: auto;
+    padding: 15px 0;
+    margin-bottom: 15px;
+
+    button {
+        font-size: 20px;
+        color: var(--text-color-4);
+        font-weight: 500;
+        margin-right: 15px;
+        text-transform: capitalize;
+        cursor: pointer;
+        @media (min-width: 768px){
+            font-size: 24px;
+            margin-right: 20px;
+        }
+        &.active{
+            color: var(--color-1);
+        }
+    }
+}
