@@ -366,6 +366,7 @@
                         user-select: none;
                         border-radius: 50%;
                         text-align: center;
+                        line-height: 0;
                         &:hover{
                             background-color: var(--color-1);
                             color: var(--white);

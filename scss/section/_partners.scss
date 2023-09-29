@@ -6,10 +6,14 @@ section.partners{
         width: 200px;
         height: 60px;
         @include row-center;
+        
         img{
             width: 100%;
             height: 100%;
             object-fit: contain;
+        }
+        &:hover{
+            transform: scale(1.1);
         }
     }
 }

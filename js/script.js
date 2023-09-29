@@ -69,39 +69,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         // product card button
+        $('.general-icons .basket .badge').html($('.basket-button.active').length)
+        $('.general-icons .compare .badge').html($('.compare-button.active').length)
+        $('.general-icons .wishlist .badge').html($('.favorite-button.active').length)
+        
         $('.basket-button').click(function () {
             $(this).toggleClass('active');
-            let badge = $('.general-icons .basket .badge');
-            let value = parseInt(badge.html());
-            if ($(this).hasClass('active')) {
-                value += 1;
-            } else {
-                value -= 1;
-            }
-            badge.html(value)
+            $('.general-icons .basket .badge').html($('.basket-button.active').length)
         })
         $('.compare-button').click(function () {
             $(this).toggleClass('active')
-            let badge = $('.general-icons .compare .badge');
-            let value = parseInt(badge.html());
-            if ($(this).hasClass('active')) {
-                value += 1;
-            } else {
-                value -= 1;
-            }
-            badge.html(value)
+            $('.general-icons .compare .badge').html($('.compare-button.active').length)
         })
         $('.favorite-button').click(function () {
             $(this).toggleClass('active')
-            let badge = $('.general-icons .wishlist .badge');
-            let value = parseInt(badge.html());
-            if ($(this).hasClass('active')) {
-                value += 1;
-            } else {
-                value -= 1;
-            }
-            badge.html(value)
+            $('.general-icons .wishlist .badge').html($('.favorite-button.active').length)
         })
+
+
+        // show filter
         $('.filters-show-btn').click(function () {
             $('.filters-wrapper').toggleClass('d-none')
         })

@@ -40,20 +40,7 @@
         }
 
     }
-    .products-grid{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        place-items: center;
-        gap: 30px;
-        padding: 40px 0;
-        @media (min-width: 768px){
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @media (min-width: 1400px){
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
+    
     .product-pagination{
         width: 100%;
         @include row-center;

@@ -5,7 +5,8 @@
     a {
         margin-right: 25px;
         position: relative;
-        .badge{
+
+        .badge {
             position: absolute;
             top: 0;
             right: 0;
@@ -17,6 +18,8 @@
             @include row-center;
             text-align: center;
             transform: translate(17px, -10px);
+            text-align: center;
+            line-height: 0;
         }
 
         @media (min-width: 1400px) {
@@ -29,7 +32,7 @@
         }
     }
 
-    &.mobile{
+    &.mobile {
         position: fixed;
         @include column-align-start;
         top: 50%;
@@ -37,7 +40,8 @@
         transform: translateY(-50%);
         z-index: 99999;
         width: 65px;
-        a{
+
+        a {
             display: block;
             margin-bottom: 10px;
             width: 100%;
@@ -47,7 +51,8 @@
             position: relative;
             background-color: var(--bg-color-1);
             margin-right: 0;
-            .badge{
+
+            .badge {
                 position: absolute;
                 top: 7px;
                 right: 22px;
@@ -59,8 +64,11 @@
                 @include row-center;
                 color: var(--color-1);
                 font-weight: 500;
+                text-align: center;
+                line-height: 0;
             }
-            img{
+
+            img {
                 width: 30px;
                 height: 25px;
             }

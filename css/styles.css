@@ -468,6 +468,8 @@ main {
   align-items: center;
   text-align: center;
   transform: translate(17px, -10px);
+  text-align: center;
+  line-height: 0;
 }
 @media (min-width: 1400px) {
   .general-icons a {
@@ -516,6 +518,8 @@ main {
   align-items: center;
   color: var(--color-1);
   font-weight: 500;
+  text-align: center;
+  line-height: 0;
 }
 .general-icons.mobile a img {
   width: 30px;
@@ -528,7 +532,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-transform: capitalize;
 }
 .page-heading .title {
@@ -1139,6 +1143,55 @@ footer .footer-bottom .container .inner .social-icons a:last-child {
   align-items: center;
   overflow: visible;
   z-index: 0;
+}
+
+.products-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  gap: 30px;
+  padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .products-grid.item-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .products-grid.item-xl-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .products-grid.item-xl-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .products-grid.item-xxl-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1400px) {
+  .products-grid.item-xxl-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .products-grid.item-xxl-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .products-grid.item-xxl-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1400px) {
+  .products-grid.item-xxl-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .product-card {
@@ -1768,6 +1821,7 @@ footer .footer-bottom .container .inner .social-icons a:last-child {
           user-select: none;
   border-radius: 50%;
   text-align: center;
+  line-height: 0;
 }
 .product-detail-grid .product-content .product-confirm-cart .add-basket .product-amount button:hover {
   background-color: var(--color-1);
@@ -2238,6 +2292,12 @@ section.similar-products {
   margin-bottom: 40px;
   position: relative;
 }
+section.wishlist {
+  width: 100%;
+  padding: 40px 0;
+  margin-bottom: 40px;
+  position: relative;
+}
 
 section.banner .banner-slide {
   width: 100%;
@@ -2308,11 +2368,13 @@ section.category-cards .category-card {
   position: relative;
   background-size: cover;
   background-position: center;
+  background-repeat: repeat;
   border-radius: 5px;
   color: var(--white);
   text-transform: capitalize;
   padding: 20px;
   text-align: center;
+  transition: all 0.2s;
 }
 @media (min-width: 768px) {
   section.category-cards .category-card {
@@ -2324,6 +2386,7 @@ section.category-cards .category-card .image {
   width: 150px;
   height: 100px;
   margin-bottom: 20px;
+  transition: all 0.2s;
 }
 @media (min-width: 768px) {
   section.category-cards .category-card .image {
@@ -2336,6 +2399,12 @@ section.category-cards .category-card .image img {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+section.category-cards .category-card:hover {
+  background-position: top 20px left 20px;
+}
+section.category-cards .category-card:hover .image {
+  transform: scale(1.1);
 }
 
 section.partners .swiper-slide {
@@ -2357,6 +2426,9 @@ section.partners .partner-logo img {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+section.partners .partner-logo:hover {
+  transform: scale(1.1);
 }
 
 section.services .services-wrapper {
@@ -2388,6 +2460,7 @@ section.services .services-wrapper .service-cart {
   color: var(--text-color-1);
   text-align: center;
   text-transform: capitalize;
+  transition: all 0.2s;
 }
 @media (min-width: 768px) {
   section.services .services-wrapper .service-cart {
@@ -2459,14 +2532,23 @@ section.services .services-wrapper .service-cart.bg-left {
   background-size: 50%;
   background-position: bottom left;
 }
+section.services .services-wrapper .service-cart.bg-left:hover {
+  background-position: bottom right;
+}
 section.services .services-wrapper .service-cart.bg-right {
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: bottom right;
 }
+section.services .services-wrapper .service-cart.bg-right:hover {
+  background-position: bottom left;
+}
 section.services .services-wrapper .service-cart.bg-cover {
   background-size: cover;
   background-position: center;
+}
+section.services .services-wrapper .service-cart.bg-cover:hover {
+  background-position: top 50px left 50px;
 }
 
 .products-general-wrapper {
@@ -2532,24 +2614,6 @@ section.services .services-wrapper .service-cart.bg-cover {
 .products-general-wrapper .filters-show-btn img {
   margin-right: 5px;
   display: block;
-}
-.products-general-wrapper .products-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  place-items: center;
-  gap: 30px;
-  padding: 40px 0;
-}
-@media (min-width: 768px) {
-  .products-general-wrapper .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1400px) {
-  .products-general-wrapper .products-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 .products-general-wrapper .product-pagination {
   width: 100%;

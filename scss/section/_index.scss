@@ -26,6 +26,9 @@ section{
     &.similar-products{
         @include make-section(0,40px,40px);
     }
+    &.wishlist{
+        @include make-section(0,40px,40px);
+    }
 }
 
 

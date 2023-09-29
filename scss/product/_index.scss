@@ -13,7 +13,7 @@ $product-price-color: var(--color-1);
     }
 }
 
-
+@import 'grid';
 @import 'cart';
 @import 'detail';
 @import 'filter/index';

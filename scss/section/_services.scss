@@ -21,6 +21,7 @@ section.services {
             color: var(--text-color-1);
             text-align: center;
             text-transform: capitalize;
+            transition: all 0.2s;
             @media (min-width: 768px){
                 @include row-between;
                 text-align: start;
@@ -77,15 +78,24 @@ section.services {
                 background-repeat: no-repeat;
                 background-size: 50%;
                 background-position: bottom left;
+                &:hover{
+                    background-position: bottom right;
+                }
             }
             &.bg-right {
                 background-repeat: no-repeat;
                 background-size: 50%;
                 background-position: bottom right;
+                &:hover{
+                    background-position: bottom left;
+                }
             }
             &.bg-cover{
                 background-size: cover;
                 background-position: center;
+                &:hover{
+                    background-position: top 50px left 50px;
+                }
             }
         }
     }
