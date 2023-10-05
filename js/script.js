@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.general-icons .basket .badge').html($('.basket-button.active').length)
         $('.general-icons .compare .badge').html($('.compare-button.active').length)
         $('.general-icons .wishlist .badge').html($('.favorite-button.active').length)
-        
+
         $('.basket-button').click(function () {
             $(this).toggleClass('active');
             $('.general-icons .basket .badge').html($('.basket-button.active').length)
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
             $(this).find('.menu').addClass('d-none')
         })
 
-        $('.product-main-swiper .image').on('mousemove',function (e) {
+        $('.product-main-swiper .image').on('mousemove', function (e) {
             $(this).addClass('zoom');
             let zoomer = $(this);
             let offsetX, offsetY, x, y;
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             zoomer.css('background-position', x + '% ' + y + '%');
         })
-        $('.product-main-swiper .image').on('mouseleave', function(){
+        $('.product-main-swiper .image').on('mouseleave', function () {
             $(this).removeClass('zoom');
             $(this).css('background-position', 'center');
         })
@@ -159,36 +159,18 @@ document.addEventListener('DOMContentLoaded', function () {
         //color checkbox in detail page
         $(".product-check.usable").each(function () {
             var checkbox = $(this).find("input[type='checkbox']");
-            
+
             // Checkbox'un "checked" durumunu kontrol ediyoruz
             if (checkbox.prop("checked")) {
                 $(this).addClass("active");
             }
         });
 
-        $('.product-check.usable').click(function(){
+        $('.product-check.usable').click(function () {
             $(this).toggleClass('active');
             var checkbox = $(this).find("input[type='checkbox']");
             checkbox.prop("checked", !checkbox.prop("checked"));
         })
-
-
-        // product amount
-        $('.product-amount button.decrement').click(function(){
-            let input = $(this).parent('.product-amount').find('input');
-            let value = parseInt(input.val());
-            if(value !== 1){
-                value -= 1;
-            }
-            input.val(value);
-        })
-        $('.product-amount button.increment').click(function(){
-            let input = $(this).parent('.product-amount').find('input');
-            let value = parseInt(input.val());
-            value += 1;
-            input.val(value);
-        })
-
 
         // category buttons
         let firstCategory = $('.product-category-buttons button:first-child');
@@ -196,13 +178,147 @@ document.addEventListener('DOMContentLoaded', function () {
         firstCategory.addClass('active');
         $('.products-swiper[data-category-id]').addClass('d-none')
         $(`.products-swiper[data-category-id="${firstCategoryID}"]`).removeClass('d-none')
-        $('.product-category-buttons button').click(function(){
+        $('.product-category-buttons button').click(function () {
             let id = $(this).data('id');
             $('.product-category-buttons button').removeClass('active');
             $(this).addClass('active');
             $('.products-swiper[data-category-id]').addClass('d-none')
             $(`.products-swiper[data-category-id="${id}"]`).removeClass('d-none')
         })
+
+
+
+
+
+
+
+
+
+        // product amount decrement button func
+        $('.product-amount button.decrement').click(function () {
+            let input = $(this).parent('.product-amount').find('input');
+            let value = parseInt(input.val());
+            if (isNaN(value)) {
+                value = 1;
+            }
+            if (value !== 1) {
+                value -= 1;
+            }
+            input.val(value);
+            let productID = $(this).closest('tr').data('product-id');
+            if (productID) {
+                let productPrice = $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price span`).text();
+                let total = Number(productPrice) * value;
+                $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price-total span`).text(total.toFixed(2))
+            }
+
+            // basket result total calculate
+            let generalProductTotalValue = 0;
+            let generalBasketTotalValue = 0;
+            let basketDeliveryValue = Number($('.basket-result .delivery-price').text());
+            let basketDiscountValue = Number($('.basket-result .discount-price').text());
+            $('.basket-table-wrapper .product-price-total span').each(function () {
+                let value = Number($(this).text());
+                if (!isNaN(value)) {
+                    generalProductTotalValue += value;
+                }
+                generalBasketTotalValue = generalProductTotalValue + basketDeliveryValue - basketDiscountValue;
+                console.log(value)
+                $('.basket-result .product-total').text(generalProductTotalValue.toFixed(2));
+                $('.basket-result .general-total-price').text(generalBasketTotalValue.toFixed(2));
+            })
+        })
+        // product amount increment button func
+        $('.product-amount button.increment').click(function () {
+            let input = $(this).parent('.product-amount').find('input');
+            let value = parseInt(input.val());
+            if (isNaN(value)) {
+                value = 0;
+            }
+            value += 1;
+            input.val(value);
+            let productID = $(this).closest('tr').data('product-id');
+            if (productID) {
+                let productPrice = $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price span`).text();
+                let total = Number(productPrice) * value;
+                $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price-total span`).text(total.toFixed(2))
+            }
+
+            // basket result total calculate
+            let generalProductTotalValue = 0;
+            let generalBasketTotalValue = 0;
+            let basketDeliveryValue = Number($('.basket-result .delivery-price').text());
+            let basketDiscountValue = Number($('.basket-result .discount-price').text());
+            $('.basket-table-wrapper .product-price-total span').each(function () {
+                let value = Number($(this).text());
+                if (!isNaN(value)) {
+                    generalProductTotalValue += value;
+                }
+                generalBasketTotalValue = generalProductTotalValue + basketDeliveryValue - basketDiscountValue;
+                console.log(value)
+                $('.basket-result .product-total').text(generalProductTotalValue.toFixed(2));
+                $('.basket-result .general-total-price').text(generalBasketTotalValue.toFixed(2));
+            })
+        })
+
+        // default set value
+        $('.product-amount input').each(function () {
+            let value = $(this).val();
+            if (!isNaN(value)) {
+                let productID = $(this).closest('tr').data('product-id');
+                if (productID) {
+                    let productPrice = $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price span`).text();
+                    let total = Number(productPrice) * value;
+                    $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price-total span`).text(total.toFixed(2))
+                }
+            }
+        })
+
+        // product amount oninput func
+        $('.product-amount input').on('input', function () {
+            let value = $(this).val();
+            if (!isNaN(value)) {
+                let productID = $(this).closest('tr').data('product-id');
+                if (productID) {
+                    let productPrice = $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price span`).text();
+                    let total = Number(productPrice) * value;
+                    $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price-total span`).text(total.toFixed(2))
+                }
+            }
+
+            // basket result total calculate
+            let generalProductTotalValue = 0;
+            let generalBasketTotalValue = 0;
+            let basketDeliveryValue = Number($('.basket-result .delivery-price').text());
+            let basketDiscountValue = Number($('.basket-result .discount-price').text());
+            $('.basket-table-wrapper .product-price-total span').each(function () {
+                let value = Number($(this).text());
+                if (!isNaN(value)) {
+                    generalProductTotalValue += value;
+                }
+                generalBasketTotalValue = generalProductTotalValue + basketDeliveryValue - basketDiscountValue;
+                console.log(value)
+                $('.basket-result .product-total').text(generalProductTotalValue.toFixed(2));
+                $('.basket-result .general-total-price').text(generalBasketTotalValue.toFixed(2));
+            })
+        })
+
+        // basket result total calculate
+        let generalProductTotalValue = 0;
+        let generalBasketTotalValue = 0;
+        let basketDeliveryValue = Number($('.basket-result .delivery-price').text());
+        let basketDiscountValue = Number($('.basket-result .discount-price').text());
+        $('.basket-table-wrapper .product-price-total span').each(function () {
+            let value = Number($(this).text());
+            if (!isNaN(value)) {
+                generalProductTotalValue += value;
+            }
+            generalBasketTotalValue = generalProductTotalValue + basketDeliveryValue - basketDiscountValue;
+            console.log(value)
+            $('.basket-result .product-total').text(generalProductTotalValue.toFixed(2));
+            $('.basket-result .general-total-price').text(generalBasketTotalValue.toFixed(2));
+        })
+
 
     })
 })

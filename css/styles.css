@@ -2390,6 +2390,12 @@ section.comparisons {
   margin-bottom: 40px;
   position: relative;
 }
+section.basket {
+  width: 100%;
+  padding: 40px 0;
+  margin-bottom: 40px;
+  position: relative;
+}
 
 section.banner .banner-slide {
   width: 100%;
@@ -2765,4 +2771,264 @@ section.services .services-wrapper .service-cart.bg-cover:hover {
 }
 .product-category-buttons button.active {
   color: var(--color-1);
+}
+
+.basket-table-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+  padding-bottom: 30px;
+}
+.basket-table-wrapper table {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+}
+.basket-table-wrapper table tr {
+  border: none;
+  border-bottom: 1px solid #C6C6C6;
+}
+.basket-table-wrapper table td, .basket-table-wrapper table th {
+  padding: 20px 0;
+  text-align: center;
+}
+.basket-table-wrapper table th {
+  color: #838383;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.basket-table-wrapper table .image-td {
+  width: 200px;
+}
+.basket-table-wrapper table .info-td {
+  width: 300px;
+}
+.basket-table-wrapper table .product-image {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.basket-table-wrapper table .product-image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.basket-table-wrapper table .product-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10px;
+}
+.basket-table-wrapper table .product-info .name {
+  color: var(--text-color-1);
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.basket-table-wrapper table .product-info .code {
+  color: #ACB1C4;
+}
+.basket-table-wrapper table .product-color {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.basket-table-wrapper table .product-color .color {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #00477F;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.basket-table-wrapper table .product-color .color span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.basket-table-wrapper table .product-price,
+.basket-table-wrapper table .product-price-total {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+.basket-table-wrapper table .amount-td {
+  width: 240px;
+}
+.basket-table-wrapper table .amount-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.basket-table-wrapper table .product-amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 60px;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+}
+.basket-table-wrapper table .product-amount input {
+  width: 60px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 60px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+.basket-table-wrapper table .product-amount button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  line-height: none;
+  color: #fff;
+  background-color: #D1D1D1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.basket-table-wrapper table .product-amount button:hover {
+  background-color: var(--color-1);
+}
+.basket-table-wrapper table .delete-td {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.basket-table-wrapper table .delete-td button {
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.basket-table-wrapper table .delete-td button:hover {
+  transform: scale(1.3);
+}
+
+.basket-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.basket-bottom .basket-result {
+  width: 100%;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: auto;
+  max-width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #C6C6C6;
+}
+.basket-bottom .basket-result .line {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 576px) {
+  .basket-bottom .basket-result .line {
+    max-width: 500px;
+  }
+}
+.basket-bottom .basket-result .line:last-child {
+  font-size: 18px;
+}
+.basket-bottom .basket-result .line .label {
+  min-width: 125px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-right: 20px;
+}
+@media (min-width: 576px) {
+  .basket-bottom .basket-result .line .label {
+    text-align: end;
+  }
+}
+.basket-bottom .basket-result .line .value {
+  text-align: end;
+}
+.basket-bottom .basket-confirm {
+  width: 100%;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.basket-bottom .basket-confirm .confirm-button {
+  width: 100%;
+  max-width: 310px;
+  min-height: 60px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--bg-color-1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--white);
+  text-transform: capitalize;
+  position: relative;
+  border: 3px solid transparent;
+  transition: all 0.3s;
+}
+.basket-bottom .basket-confirm .confirm-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--color-1);
+  border-radius: 10px;
+  z-index: -1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  transform: scale(1.3);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.basket-bottom .basket-confirm .confirm-button:hover {
+  background-color: transparent;
+  color: var(--color-1);
+}
+.basket-bottom .basket-confirm .confirm-button:hover::after {
+  opacity: 1;
+  transform: scale(1);
 }/*# sourceMappingURL=styles.css.map */

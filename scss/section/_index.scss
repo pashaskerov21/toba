@@ -32,6 +32,9 @@ section{
     &.comparisons{
         @include make-section(0,40px,40px);
     }
+    &.basket{
+        @include make-section(0,40px,40px);
+    }
 }
 
 
@@ -44,3 +47,4 @@ section{
 @import 'products-page';
 @import 'product-detail';
 @import 'product-accesories';
+@import 'basket';

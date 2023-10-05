@@ -1,0 +1,207 @@
+.basket-table-wrapper{
+    width: 100%;
+    @include row-justify-start;
+    overflow: auto;
+    padding-bottom: 30px;
+    //margin-bottom: 30px;
+    table{
+        width: 100%;
+        min-width: 1200px;
+        border-collapse: collapse;
+        tr{
+            border: none;
+            border-bottom: 1px solid #C6C6C6;
+        }
+        td, th{
+            padding: 20px 0;
+            text-align: center;
+        }
+        th{
+            color: #838383;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+        .image-td{
+            width: 200px;
+        }
+        .info-td{
+            width: 300px;
+        }
+        .product-image{
+            width: 100%;
+            
+            @include row-center;
+            img{
+                object-fit: contain;
+            }
+        }
+        .product-info{
+            width: 100%;
+            @include column-align-start;
+            padding: 0 10px;
+            .name{
+                color: var(--text-color-1);
+                font-weight: 500;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            .code{
+                color: #ACB1C4;
+            }
+        }
+        .product-color{
+            width: 100%;
+            @include row-center;
+            .color{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 1px solid #00477F;
+                @include row-center;
+                span{
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .product-price,
+        .product-price-total{
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .amount-td{
+            width: 240px;
+        }
+        .amount-wrapper{
+            width: 100%;
+            @include row-center;
+        }
+        .product-amount{
+            @include row-center;
+            width: 180px;
+            height: 60px;
+            background-color: #F5F5F5;
+            border-radius: 5px;
+            input{
+                width: 60px;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                height: 60px;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            button{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                @include row-center;
+                line-height: none;
+                color: #fff;
+                background-color: #D1D1D1;
+                user-select: none;
+                &:hover{
+                    background-color: var(--color-1);
+                }
+            }
+        }
+        .delete-td{
+            width: 100%;
+            @include row-center;
+            button{
+                transition: all 0.2s;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.3);
+                }
+            }
+        }
+
+    }
+}
+.basket-bottom{
+    width: 100%;
+    @include column-center;
+    .basket-result{
+        width: 100%;
+        padding: 25px 0;
+        @include column-align-end;
+        overflow: auto;
+        max-width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #C6C6C6;
+        .line{
+            @include row-justify-end;
+            margin-bottom: 5px;
+            font-size: 16px;
+            width: 100%;
+            @include row-between;
+            @media (min-width: 576px){
+                max-width: 500px;
+            }
+            &:last-child{
+                font-size: 18px;
+            }
+            .label{
+                min-width: 125px;
+                font-weight: 500;
+                text-transform: capitalize;
+                margin-right: 20px;
+                @media (min-width: 576px){
+                    text-align: end;
+                }
+            }
+            .value{
+                text-align: end;
+            }
+        }
+    }
+    .basket-confirm{
+        width: 100%;
+        padding: 25px 0;
+        @include row-justify-end;
+        .confirm-button{
+            width: 100%;
+            max-width: 310px;
+            min-height: 60px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: var(--bg-color-1);
+            @include row-center;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--white);
+            text-transform: capitalize;
+            position: relative;
+            border: 3px solid transparent;
+            transition: all 0.3s;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border: 3px solid var(--color-1);
+                border-radius: 10px;
+                z-index: -1;
+                user-select: none;
+                pointer-events: none;
+                transform: scale(1.3);
+                opacity: 0;
+                transition: all 0.3s;
+            }
+            &:hover{
+                background-color: transparent;
+                color: var(--color-1);
+                &::after{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
