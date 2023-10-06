@@ -35,6 +35,12 @@ section{
     &.basket{
         @include make-section(0,40px,40px);
     }
+    &.login{
+        @include make-section(0,40px,40px);
+    }
+    &.register{
+        @include make-section(0,40px,40px);
+    }
 }
 
 

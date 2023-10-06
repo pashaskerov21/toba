@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOBA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/script.js" as="script">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="loader">
+            <div class="logo">
+                <img src="images/logo/logo-2.svg" width="150" height="150" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="general-icons mobile d-xl-none">
+        <a href="#" class="compare icon">
+            <img src="images/icon/header/compare.svg" width="30" height="20" alt="">
+            <span class="badge">0</span>
+        </a>
+        <a href="#" class="wishlist icon">
+            <img src="images/icon/header/heart.svg" width="25" height="25" alt="">
+            <span class="badge">0</span>
+        </a>
+        <a href="#" class="basket icon">
+            <img src="images/icon/header/basket.svg" width="20" height="25" alt="">
+            <span class="badge">0</span>
+        </a>
+    </div>
+    <header>
+        <nav class="top-nav">
+            <div class="container">
+                <div class="inner">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo/logo.svg" loading="eager" width="100" height="50" alt="logo">
+                    </a>
+                    <div class="search">
+
+                        <form action="">
+                            <input type="text" placeholder="Axtar">
+                            <button type="submit">
+                                <img src="images/icon/header/search.svg" width="20" height="20" alt="">
+                            </button>
+                        </form>
+                        <button class="close-button">
+                            <img src="images/icon/xmark.svg" width="14" height="16" alt="">
+                        </button>
+                    </div>
+                    <div class="right">
+                        <a href="#" class="phone-link">
+                            <img src="images/icon/header/phone.svg" width="25" height="25" alt="">
+                            <span class="d-none d-md-block">+994 55 555 55 55</span>
+                        </a>
+                        <div class="general-icons d-none d-xl-flex">
+                            <a href="#" class="compare icon">
+                                <img src="images/icon/header/compare.svg" width="30" height="20" alt="">
+                                <span class="badge">0</span>
+                            </a>
+                            <a href="#" class="wishlist icon">
+                                <img src="images/icon/header/heart.svg" width="25" height="25" alt="">
+                                <span class="badge">0</span>
+                            </a>
+                            <a href="#" class="basket icon">
+                                <img src="images/icon/header/basket.svg" width="20" height="25" alt="">
+                                <span class="badge">0</span>
+                            </a>
+                        </div>
+                        <div class="mobile-icons">
+                            <button class="search-button d-lg-none">
+                                <img src="images/icon/header/search-2.svg" width="25" height="25" alt="">
+                            </button>
+                            <button class="menu-button d-xl-none">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="bottom-nav">
+            <div class="container">
+                <div class="inner">
+                    <div class="categories">
+                        <div class="category has-child" data-id="1">
+                            <div class="cat-name">
+                                <a href="#" class="link">
+                                    <div class="icon">
+                                        <img src="images/category/icon/bicycle.svg" width="40" height="40" alt="">
+                                    </div>
+                                    <span>velosiped</span>
+                                </a>
+                                <button>
+                                    <img src="images/icon/chevron-right.svg" width="10" height="15" alt="">
+                                </button>
+                            </div>
+                            <div class="subcategories d-none" data-category-id="1">
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-1.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">təkərlər</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-2.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">rul</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-3.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">arxa açarlar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-4.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">ön açarlar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-5.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">velosiped kameraları</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-6.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">pedallar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-7.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">arxa ulduzlar</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="category has-child" data-id="2">
+                            <div class="cat-name">
+                                <a href="#" class="link">
+                                    <div class="icon">
+                                        <img src="images/category/icon/helmet.svg" width="40" height="40" alt="">
+                                    </div>
+                                    <span>kaska</span>
+                                </a>
+                                <button>
+                                    <img src="images/icon/chevron-right.svg" width="10" height="15" alt="">
+                                </button>
+                            </div>
+                            <div class="subcategories d-none" data-category-id="2">
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-1.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">təkərlər</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-2.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">rul</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-3.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">arxa açarlar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-4.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">ön açarlar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-5.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">velosiped kameraları</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-6.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">pedallar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-7.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">arxa ulduzlar</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="category has-child" data-id="3">
+                            <div class="cat-name">
+                                <a href="#" class="link">
+                                    <div class="icon">
+                                        <img src="images/category/icon/clothes-1.svg" width="40" height="40" alt="">
+                                    </div>
+                                    <span>geyim 1</span>
+                                </a>
+                                <button>
+                                    <img src="images/icon/chevron-right.svg" width="10" height="15" alt="">
+                                </button>
+                            </div>
+                            <div class="subcategories d-none" data-category-id="3">
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-1.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">təkərlər</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-2.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">rul</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-3.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">arxa açarlar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-4.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">ön açarlar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-5.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">velosiped kameraları</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-6.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">pedallar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-7.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">arxa ulduzlar</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="category has-child" data-id="4">
+                            <div class="cat-name">
+                                <a href="#" class="link">
+                                    <div class="icon">
+                                        <img src="images/category/icon/clothes-2.svg" width="40" height="40" alt="">
+                                    </div>
+                                    <span>geyim 2</span>
+                                </a>
+                                <button>
+                                    <img src="images/icon/chevron-right.svg" width="10" height="15" alt="">
+                                </button>
+                            </div>
+                            <div class="subcategories d-none" data-category-id="4">
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-1.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">təkərlər</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-2.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">rul</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-3.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">arxa açarlar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-4.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">ön açarlar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-5.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">velosiped kameraları</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-6.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">pedallar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-7.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">arxa ulduzlar</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="category has-child" data-id="5">
+                            <div class="cat-name">
+                                <a href="#" class="link">
+                                    <div class="icon">
+                                        <img src="images/category/icon/equipment.svg" width="40" height="40" alt="">
+                                    </div>
+                                    <span>avadanlıqlar</span>
+                                </a>
+                                <button>
+                                    <img src="images/icon/chevron-right.svg" width="10" height="15" alt="">
+                                </button>
+                            </div>
+                            <div class="subcategories d-none" data-category-id="5">
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-1.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">təkərlər</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-2.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">rul</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-3.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">arxa açarlar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-4.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">ön açarlar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-5.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">velosiped kameraları</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-6.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">pedallar</div>
+                                </a>
+                                <a href="#" class="subcategory">
+                                    <div class="image">
+                                        <img src="images/category/subcategory/img-7.png" width="70" height="70" alt="">
+                                    </div>
+                                    <div class="sub-name">arxa ulduzlar</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="category" data-id="6">
+                            <div class="cat-name">
+                                <a href="#" class="link">
+                                    <div class="icon">
+                                        <img src="images/category/icon/repair.svg" width="40" height="40" alt="">
+                                    </div>
+                                    <span>təmir</span>
+                                </a>
+                                <button>
+                                    <img src="images/icon/chevron-right.svg" width="10" height="15" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="menu-backdrop d-none"></div>
+    </header>
+
+    <main>
+        <section class="login">
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="title">giriş</h1>
+                    <div class="breadcrumb">
+                        <a href="#">ana səhifə</a>
+                        <img src="images/icon/checron-right-gray.svg" width="8" height="12" alt="">
+                        <a href="#">giriş</a>
+                    </div>
+                    <form action="#" class="general-form">
+                        <div class="inner">
+                            <div class="form-tab">
+                                <div class="form-component">
+                                    <input type="text" class="form-control" placeholder="E-mail və ya nömrə">
+                                </div>
+                                <div class="form-component">
+                                    <input type="password" class="form-control" placeholder="Şifrə">
+                                </div>
+                                <div class="confirm">
+                                    <button type="submit" class="submit-button right">giriş</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="links-row">
+                    <div class="footer-links">
+                        <a href="#">velosipedlər</a>
+                        <a href="#">kaskalar</a>
+                        <a href="#">geyimlər</a>
+                        <a href="#">təmir</a>
+                        <a href="#">geyim 2</a>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">avadanlıqlar</a>
+                        <a href="#">velosiped zincirləri</a>
+                        <a href="#">təkərlər</a>
+                        <a href="#">su üçün qablar</a>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">haqqımızda</a>
+                        <a href="#">istifadə qaydaları</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="inner">
+                    <a href="#" class="logo">
+                        <img src="images/logo/logo-2.svg" width="140" height="40" alt="">
+                    </a>
+                    <div class="copyright">&copy; 2023 Bütün hüquqlar qorunur.</div>
+                    <div class="social-icons">
+                        <a href="#"><img src="images/icon/social/facebook.svg" width="20" height="20" alt=""></a>
+                        <a href="#"><img src="images/icon/social/linkedin.svg" width="20" height="20" alt=""></a>
+                        <a href="#"><img src="images/icon/social/twitter.svg" width="20" height="20" alt=""></a>
+                        <a href="#"><img src="images/icon/social/instagram.svg" width="20" height="20" alt=""></a>
+                        <a href="#"><img src="images/icon/social/youtube.svg" width="20" height="20" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/swiper.js" defer></script>
+</body>
+
+</html>
