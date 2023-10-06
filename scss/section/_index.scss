@@ -41,9 +41,10 @@ section{
     &.register{
         @include make-section(0,40px,40px);
     }
-    &.basket-form{
+    &.orders{
         @include make-section(0,40px,40px);
     }
+
 }
 
 
@@ -58,3 +59,4 @@ section{
 @import 'product-accesories';
 @import 'basket';
 @import 'basket-form';
+@import 'order';

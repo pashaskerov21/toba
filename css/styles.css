@@ -564,7 +564,7 @@ main {
 .page-heading .breadcrumb a {
   display: block;
   color: var(--text-color-2);
-  font-size: 10px;
+  font-size: 12px;
 }
 .page-heading .breadcrumb a:hover {
   color: var(--color-1);
@@ -2648,7 +2648,7 @@ section.register {
   margin-bottom: 40px;
   position: relative;
 }
-section.basket-form {
+section.orders {
   width: 100%;
   padding: 40px 0;
   margin-bottom: 40px;
@@ -3371,4 +3371,99 @@ section.basket-form .basket-information .basket-result .line {
 section.basket-form .basket-information .basket-result .line:last-child {
   font-size: 20px;
   font-weight: 500;
+}
+
+section.orders .order-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  section.orders .order-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+section.orders .order-wrapper .order-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 1px solid #C6C6C6;
+}
+@media (min-width: 768px) {
+  section.orders .order-wrapper .order-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  section.orders .order-wrapper .order-item {
+    width: 50%;
+    padding: 30px;
+  }
+  section.orders .order-wrapper .order-item:nth-child(odd) {
+    border-right: 1px solid #C6C6C6;
+  }
+}
+section.orders .order-wrapper .order-item .image {
+  width: 100%;
+  max-width: 300px;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  section.orders .order-wrapper .order-item .image {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+section.orders .order-wrapper .order-item .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section.orders .order-wrapper .order-item .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.orders .order-wrapper .order-item .content .order-code {
+  color: #7D7D7D;
+  margin-bottom: 5px;
+}
+section.orders .order-wrapper .order-item .content .product-name {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+section.orders .order-wrapper .order-item .content .product-code {
+  color: #ACB1C4;
+  margin-bottom: 5px;
+}
+section.orders .order-wrapper .order-item .content .details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.orders .order-wrapper .order-item .content .details .line {
+  margin-bottom: 5px;
+}
+section.orders .order-wrapper .order-item .content .details span:first-child {
+  color: #7D7D7D;
+  margin-right: 10px;
 }/*# sourceMappingURL=styles.css.map */
