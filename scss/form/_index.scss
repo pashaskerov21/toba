@@ -22,11 +22,20 @@
         width: 100%;
         @include column-align-start;
         margin-bottom: 30px;
-    }
-    label{
-        color: #303030;
-        margin-bottom: 10px;
-        font-weight: 500;
+        label{
+            color: #303030;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        a.conditions{
+            font-size: 20px;
+            color: #303030;
+            font-weight: 500;
+            text-decoration: underline;
+            &:hover{
+                color: var(--color-1);
+            }
+        }
     }
     .form-control{
         border: none;
@@ -42,14 +51,15 @@
         caret-color: var(--color-1);
         &::placeholder{
             color: #6F6F6F;
+            font-family: var(--general-font);
         }
         &:focus{
             border-color: var(--color-1);
         }
-        textarea.form-control{
-            min-height: 100px;
-            resize: none;
-        }
+    }
+    textarea.form-control{
+        min-height: 120px;
+        resize: none;
     }
     .confirm{
         width: 100%;
@@ -86,7 +96,7 @@
             z-index: -1;
             user-select: none;
             pointer-events: none;
-            transform: scale(1.3);
+            transform: scale(1.15);
             opacity: 0;
             transition: all 0.3s;
         }
@@ -129,6 +139,51 @@
                     color: var(--color-1);
                 }
             }
+        }
+    }
+    .custom-checks{
+        width: 100%;
+        margin-bottom: 30px;
+        @include column-center;
+        background-color: var(--color-1);
+        min-height: 60px;
+        border-radius: 10px;
+        padding: 10px 20px;
+        @media (min-width: 768px){
+            flex-direction: row;
+        }
+        @media (min-width: 992px){
+            flex-direction: column;
+        }
+        @media (min-width: 1200px){
+            flex-direction: row;
+        }
+        input{
+            appearance: none;
+            &:checked{
+                &~label{
+                    background-color: var(--color-2);
+                    color: var(--color-1);
+                }
+            }
+        }
+        .custom-check{
+            width: 100%;
+            min-height: 50px;
+            position: relative;
+        }
+        label{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            @include row-center;
+            transition: all 0.2s;
+            border-radius: 10px;
+            color: var(--white);
+            cursor: pointer;
+            user-select: none;
         }
     }
 }

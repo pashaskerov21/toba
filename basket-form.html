@@ -404,27 +404,130 @@
     </header>
 
     <main>
-        <section class="login">
+        <section class="basket-form">
             <div class="container">
                 <div class="page-heading">
-                    <h1 class="title">giriş</h1>
+                    <h1 class="title">səbət</h1>
                     <div class="breadcrumb">
                         <a href="#">ana səhifə</a>
                         <img src="images/icon/checron-right-gray.svg" width="8" height="12" alt="">
-                        <a href="#">giriş</a>
-                    </div>             
+                        <a href="#">səbət</a>
+                    </div>
                 </div>
                 <form action="#" class="general-form">
                     <div class="inner">
                         <div class="form-tab">
                             <div class="form-component">
-                                <input type="text" class="form-control" placeholder="E-mail və ya nömrə">
+                                <label>Ad, soyad*</label>
+                                <input type="text" class="form-control" placeholder="Adınız və Soyadınız">
                             </div>
                             <div class="form-component">
-                                <input type="password" class="form-control" placeholder="Şifrə">
+                                <label>Telefon*</label>
+                                <input type="text" class="form-control" placeholder="+994 50 999 99 99">
                             </div>
-                            <div class="confirm">
-                                <button type="submit" class="submit-button right">giriş</button>
+                            <div class="form-component">
+                                <label>Email*</label>
+                                <input type="text" class="form-control" placeholder="E-mail ünvanınızı daxil edin">
+                            </div>
+                            <div class="custom-checks">
+                                <div class="custom-check">
+                                    <input type="radio" id="custom-check-shop" name="delivery" checked>
+                                    <label for="custom-check-shop">Mağazadan götür</label>
+                                </div>
+                                <div class="custom-check">
+                                    <input type="radio" id="custom-check-address" name="delivery">
+                                    <label for="custom-check-address">Ünvana çatdırılma</label>
+                                </div>
+                            </div>
+                            <div class="form-component">
+                                <label>Şəhər*</label>
+                                <input type="text" class="form-control" placeholder="Bakı, Sumqayıt">
+                            </div>
+                            <div class="form-component">
+                                <label>Ünvan*</label>
+                                <input type="text" class="form-control" placeholder="Küçə adı və ev ünvanı">
+                            </div>
+                            <div class="form-component">
+                                <label>Qeyd</label>
+                                <textarea class="form-control" placeholder="Əlavə qeydləri daxil edin"></textarea>
+                            </div>
+                            <div class="form-component">
+                                <a href="#" class="conditions">Çatdırılma şərtləri</a>
+                            </div>
+                            <div class="custom-checks">
+                                <div class="custom-check">
+                                    <input type="radio" id="custom-check-cash" name="payment">
+                                    <label for="custom-check-cash">Qapıda ödəniş</label>
+                                </div>
+                                <div class="custom-check">
+                                    <input type="radio" id="custom-check-cart" name="payment" checked>
+                                    <label for="custom-check-cart">Kartla ödəniş</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-tab">
+                            <div class="basket-information">
+                                <div class="row title">
+                                    <h2>Məlumatlar</h2>
+                                    <a href="#">Edit</a>
+                                </div>
+                                <div class="products">
+                                    <div class="row product">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/product/cart/img-1.jpg" width="180" height="110"
+                                                    alt="">
+                                            </div>
+                                            <div class="info">
+                                                <h3 class="name">Ultra 1 velosiped</h3>
+                                                <span class="code">AH3647Z</span>
+                                            </div>
+                                        </div>
+                                        <div class="price">
+                                            <span>1.900₼</span>
+                                        </div>
+                                    </div>
+                                    <div class="row product">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/product/cart/img-1.jpg" width="180" height="110"
+                                                    alt="">
+                                            </div>
+                                            <div class="info">
+                                                <h3 class="name">Ultra 1 velosiped</h3>
+                                                <span class="code">AH3647Z</span>
+                                            </div>
+                                        </div>
+                                        <div class="price">
+                                            <span>1900.00₼</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket-result">
+                                    <div class="line">
+                                        <span>Məhsul:</span>
+                                        <span>2370.00 ₼</span>
+                                    </div>
+                                    <div class="line">
+                                        <span>Çatdırılma:</span>
+                                        <span>7.00 ₼</span>
+                                    </div>
+                                    <div class="line">
+                                        <span>Endirim:</span>
+                                        <span>0.00 ₼</span>
+                                    </div>
+                                    <div class="line">
+                                        <span>Cəmi qiymət:</span>
+                                        <span>2377.00 ₼</span>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" checked style="background-image: url('images/icon/check-2.svg');">
+                                    <label for="">Qeydiyyatı təsdiqləməklə mən <a href="#">istifadə şərtlərini</a> qəbul edirəm</label>
+                                </div>
+                                <div class="confirm">
+                                    <button type="submit" class="submit-button">sifarişi təsdiqlə</button>
+                                </div>
                             </div>
                         </div>
                     </div>
