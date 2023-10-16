@@ -2636,6 +2636,12 @@ section.basket {
   margin-bottom: 40px;
   position: relative;
 }
+section.basket-form {
+  width: 100%;
+  padding: 40px 0;
+  margin-bottom: 40px;
+  position: relative;
+}
 section.login {
   width: 100%;
   padding: 40px 0;
@@ -3343,8 +3349,12 @@ section.basket-form .basket-information .row.product .info {
   align-items: flex-start;
 }
 section.basket-form .basket-information .row.product .info .name {
+  color: var(--text-color-1);
   margin-bottom: 10px;
   font-weight: 500;
+}
+section.basket-form .basket-information .row.product .info .name a {
+  color: var(--text-color-1);
 }
 section.basket-form .basket-information .row.product .info .code {
   color: #ACB1C4;

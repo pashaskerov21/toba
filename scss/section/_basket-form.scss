@@ -30,8 +30,12 @@ section.basket-form{
                 .info{
                     @include column-align-start;
                     .name{
+                        color: var(--text-color-1);
                         margin-bottom: 10px;
                         font-weight: 500;
+                        a{
+                            color: var(--text-color-1);
+                        }
                     }
                     .code{
                         color: #ACB1C4;
