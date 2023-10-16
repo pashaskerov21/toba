@@ -44,6 +44,9 @@ section{
     &.orders{
         @include make-section(0,40px,40px);
     }
+    &.about{
+        @include make-section(0,40px,40px);
+    }
 
 }
 
@@ -60,3 +63,4 @@ section{
 @import 'basket';
 @import 'basket-form';
 @import 'order';
+@import 'about'
