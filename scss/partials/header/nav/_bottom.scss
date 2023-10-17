@@ -71,9 +71,10 @@ nav.bottom-nav {
                 width: 100%;
                 @include column-align-start;
                 transition: all 0.2s;
+                padding: 0 12px;
                 &:hover{
                     @media (min-width: 1200px){
-                        padding: 0 12px;
+                        
                         background-color: var(--bg-color-4);
                     }
                 }

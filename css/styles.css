@@ -1074,10 +1074,10 @@ nav.bottom-nav .inner .categories .category {
   justify-content: center;
   align-items: flex-start;
   transition: all 0.2s;
+  padding: 0 12px;
 }
 @media (min-width: 1200px) {
   nav.bottom-nav .inner .categories .category:hover {
-    padding: 0 12px;
     background-color: var(--bg-color-4);
   }
 }
