@@ -50,22 +50,24 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
 
-        $('header .category').hover(function () {
-            let categoryID = $(this).data('id');
-            let activeSubcategory = $(`header .category .subcategories[data-category-id="${categoryID}"]`);
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active');
-                activeSubcategory.addClass('d-none');
-            } else {
+        if ($(window).width() >= 1200) {
+            $('header .category').hover(function () {
+                let categoryID = $(this).data('id');
+                let activeSubcategory = $(`header .category .subcategories[data-category-id="${categoryID}"]`);
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                    activeSubcategory.addClass('d-none');
+                } else {
+                    $('header .category').removeClass('active');
+                    $(this).addClass('active');
+                    $('header .category .subcategories').addClass('d-none');
+                    activeSubcategory.removeClass('d-none');
+                }
+            }, function () {
                 $('header .category').removeClass('active');
-                $(this).addClass('active');
                 $('header .category .subcategories').addClass('d-none');
-                activeSubcategory.removeClass('d-none');
-            }
-        }, function () {
-            $('header .category').removeClass('active');
-            $('header .category .subcategories').addClass('d-none');
-        })
+            })
+        }
 
 
         // product card button

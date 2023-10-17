@@ -75,7 +75,7 @@ const productGridSwiper = new Swiper('.products-swiper.grid-swiper', {
             spaceBetween: 20,
         },
         992: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
             grid: {
                 fill: 'row',
@@ -83,7 +83,7 @@ const productGridSwiper = new Swiper('.products-swiper.grid-swiper', {
             },
         },
         1200: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 20,
             grid: {
                 fill: 'row',
@@ -107,8 +107,12 @@ const productSwiper = new Swiper('.products-swiper.row-swiper', {
             slidesPerView: 2,
             spaceBetween: 20,
         },
-        1200: {
+        990: {
             slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 4,
             spaceBetween: 20,
         },
         1400: {

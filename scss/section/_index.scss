@@ -1,54 +1,54 @@
 section{
     &.banner{
-        @include make-section(0,0,40px);
+        @include make-section(0,0,20px);
     }
     &.category-cards{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.partners{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.services{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.products{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.products-page{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.product-detail{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.product-accessories{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.similar-products{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.wishlist{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.comparisons{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.basket{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.basket-form{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.login{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.register{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.orders{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
     &.about{
-        @include make-section(0,40px,40px);
+        @include make-section(0,20px,20px);
     }
 
 }

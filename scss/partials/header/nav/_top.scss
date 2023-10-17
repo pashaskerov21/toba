@@ -2,14 +2,14 @@ nav.top-nav {
     $bg-color: var(--bg-color-1);
     $padding-y: 12px;
     $logo-width-sm: 80px;
-    $logo-width-md: 120px;
-    $logo-width-lg: 160px;
-    $logo-width-xxl: 200px;
+    $logo-width-md: 100px;
+    $logo-width-lg: 140px;
+    $logo-width-xxl: 160px;
 
-    $min-height-sm: 70px;
-    $min-height-md: 80px;
-    $min-height-lg: 100px;
-    $min-height-xl: 120px;
+    $min-height-sm: 60px;
+    $min-height-md: 70px;
+    $min-height-lg: 80px;
+    $min-height-xl: 90px;
 
 
 
@@ -62,14 +62,14 @@ nav.top-nav {
         .phone-link {
             @include row-justify-start;
             color: var(--white);
-            font-size: 16px;
+            font-size: 14px;
 
             @media (min-width: 768px) {
                 margin-right: 25px;
             }
 
             @media (min-width: 1400px) {
-                font-size: 20px;
+                font-size: 16px;
                 margin-right: 35px;
             }
 
