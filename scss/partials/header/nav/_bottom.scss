@@ -148,8 +148,9 @@ nav.bottom-nav {
                         width: 100%;
                         display: grid;
                         grid-template-columns: repeat(5, 1fr);
+                        gap: 20px;
                         z-index: 999;
-                        padding: 30px 0;
+                        padding: 30px;
                         background-color: var(--white);
                     }
                     @media (min-width: 1400px){
@@ -164,7 +165,7 @@ nav.bottom-nav {
                         @media (min-width: 1200px){
                             width: auto;
                             @include column-center;
-                            margin-right: 20px;
+                            margin: 0;
                             padding: 10px;
                             text-align: center;
                         }
