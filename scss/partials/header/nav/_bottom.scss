@@ -40,7 +40,8 @@ nav.bottom-nav {
         @include row-center;
         z-index: 1;
         overflow: visible;
-        .container{
+
+        .container {
             align-self: stretch;
             @include row-center;
         }
@@ -54,28 +55,61 @@ nav.bottom-nav {
             align-self: stretch;
         }
 
+        .category-show-btn {
+            width: 100%;
+            @include row-between;
+            padding: 10px 0;
+            img{
+                transition: all 0.3s;
+            }
+            &.active{
+                img{
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .menu-links {
+            width: 100%;
+            @include column-align-start;
+
+            a {
+                color: var(--text-color-1);
+                font-weight: 500;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+                &:hover{
+                    color: var(--color-1);
+                    transform: translateX(10px);
+                }
+            }
+        }
+
         .categories {
             position: relative;
             width: 100%;
             @include column-align-start;
-            margin-top: 5px;
+            margin-bottom: 20px;
 
             @media (min-width: 1200px) {
                 margin-top: 0;
                 @include row-between;
                 align-self: stretch;
                 height: 100%;
+                margin-bottom: 0;
             }
 
             .category {
                 width: 100%;
                 @include column-align-start;
                 transition: all 0.2s;
-                @media (min-width: 1200px){
+
+                @media (min-width: 1200px) {
                     padding: 0 12px;
                 }
-                &:hover{
-                    @media (min-width: 1200px){
+
+                &:hover {
+                    @media (min-width: 1200px) {
                         background-color: var(--bg-color-4);
                     }
                 }
@@ -115,7 +149,7 @@ nav.bottom-nav {
 
                 .cat-name {
                     width: 100%;
-                    padding: 7px 0;
+                    padding: 5px 0;
                     @include row-between;
 
                     a.link {
@@ -125,8 +159,8 @@ nav.bottom-nav {
                         font-weight: 500;
 
                         .icon {
-                            width: 40px;
-                            height: 40px;
+                            width: 35px;
+                            height: 35px;
                             @include row-center;
                             margin-right: 12px;
 
@@ -136,9 +170,11 @@ nav.bottom-nav {
                                 object-fit: contain;
                             }
                         }
-                        span{
+
+                        span {
                             font-size: 14px;
-                            @media (min-width: 1400px){
+
+                            @media (min-width: 1400px) {
                                 font-size: 16px;
                             }
                         }
@@ -148,7 +184,8 @@ nav.bottom-nav {
                 .subcategories {
                     width: 100%;
                     @include column-align-start;
-                    @media (min-width: 1200px){
+
+                    @media (min-width: 1200px) {
                         position: absolute;
                         top: 100%;
                         left: 0;
@@ -160,7 +197,8 @@ nav.bottom-nav {
                         padding: 30px;
                         background-color: var(--white);
                     }
-                    @media (min-width: 1400px){
+
+                    @media (min-width: 1400px) {
                         grid-template-columns: repeat(6, 1fr);
                     }
 
@@ -169,14 +207,16 @@ nav.bottom-nav {
                         width: 100%;
                         @include row-justify-start;
                         margin-bottom: 5px;
-                        @media (min-width: 1200px){
+
+                        @media (min-width: 1200px) {
                             width: auto;
                             @include column-center;
                             margin: 0;
                             padding: 10px;
                             text-align: center;
                         }
-                        &:hover{
+
+                        &:hover {
                             background-color: var(--bg-color-4);
                         }
 
@@ -184,7 +224,8 @@ nav.bottom-nav {
                             width: 70px;
                             height: 70px;
                             margin-right: 15px;
-                            @media (min-width: 1200px){
+
+                            @media (min-width: 1200px) {
                                 width: 160px;
                                 height: 120px;
                                 margin-right: 0;
@@ -232,7 +273,8 @@ nav.bottom-nav {
         min-height: calc(100vh - 60px);
         max-height: calc(100vh - 60px);
     }
-    @media (min-width: 1200px){
+
+    @media (min-width: 1200px) {
         display: none;
     }
 }

@@ -34,6 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+        $('.bottom-nav .category-show-btn').on('touchstart', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $('.bottom-nav .categories').toggleClass('d-none')
+        })
+
         // categories
         $('header .category.has-child .cat-name button').on('touchstart', function (e) {
             e.preventDefault();

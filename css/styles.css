@@ -99,6 +99,7 @@ img {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  display: block;
 }
 
 a,
@@ -1048,6 +1049,37 @@ nav.bottom-nav .inner {
     align-self: stretch;
   }
 }
+nav.bottom-nav .inner .category-show-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+nav.bottom-nav .inner .category-show-btn img {
+  transition: all 0.3s;
+}
+nav.bottom-nav .inner .category-show-btn.active img {
+  transform: rotate(90deg);
+}
+nav.bottom-nav .inner .menu-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+nav.bottom-nav .inner .menu-links a {
+  color: var(--text-color-1);
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+nav.bottom-nav .inner .menu-links a:hover {
+  color: var(--color-1);
+  transform: translateX(10px);
+}
 nav.bottom-nav .inner .categories {
   position: relative;
   width: 100%;
@@ -1055,7 +1087,7 @@ nav.bottom-nav .inner .categories {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 5px;
+  margin-bottom: 20px;
 }
 @media (min-width: 1200px) {
   nav.bottom-nav .inner .categories {
@@ -1066,6 +1098,7 @@ nav.bottom-nav .inner .categories {
     align-items: center;
     align-self: stretch;
     height: 100%;
+    margin-bottom: 0;
   }
 }
 nav.bottom-nav .inner .categories .category {
@@ -1116,7 +1149,7 @@ nav.bottom-nav .inner .categories .category.active button img {
 }
 nav.bottom-nav .inner .categories .category .cat-name {
   width: 100%;
-  padding: 7px 0;
+  padding: 5px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1132,8 +1165,8 @@ nav.bottom-nav .inner .categories .category .cat-name a.link {
   font-weight: 500;
 }
 nav.bottom-nav .inner .categories .category .cat-name a.link .icon {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   display: flex;
   flex-direction: row;
   justify-content: center;
