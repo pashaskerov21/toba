@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         // categories
-        $('header .category.has-child .cat-name button').on('click', function () {
+        $('header .category.has-child .cat-name button').on('touchstart', function (e) {
+            e.preventDefault();
             let category = $(this).closest('.category');
             let categoryID = category.data('id');
             let activeSubcategory = $(`header .category .subcategories[data-category-id="${categoryID}"]`);

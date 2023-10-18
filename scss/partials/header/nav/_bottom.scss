@@ -2,12 +2,12 @@ nav.bottom-nav {
     background-color: var(--bg-color-2);
 
     position: fixed;
-    top: 60px;
+    top: 50px;
     right: -100%;
     width: 100%;
     max-width: 500px;
-    min-height: calc(100vh - 60px);
-    max-height: calc(100vh - 60px);
+    min-height: calc(100vh - 50px);
+    max-height: calc(100vh - 50px);
     overflow: auto;
     z-index: 99999;
     transition: all 0.3s;
@@ -19,15 +19,15 @@ nav.bottom-nav {
     }
 
     @media (min-width: 768px) {
-        top: 70px;
-        min-height: calc(100vh - 70px);
-        max-height: calc(100vh - 70px);
+        top: 50px;
+        min-height: calc(100vh - 50px);
+        max-height: calc(100vh - 50px);
     }
 
     @media (min-width: 992px) {
-        top: 80px;
-        min-height: calc(100vh - 80px);
-        max-height: calc(100vh - 80px);
+        top: 60px;
+        min-height: calc(100vh - 60px);
+        max-height: calc(100vh - 60px);
     }
 
     @media (min-width: 1200px) {
@@ -36,7 +36,7 @@ nav.bottom-nav {
         right: 0;
         opacity: 1;
         max-width: 100%;
-        min-height: 78px;
+        min-height: 55px;
         @include row-center;
         z-index: 1;
         overflow: visible;
@@ -211,26 +211,29 @@ nav.bottom-nav {
 
 .menu-backdrop {
     position: fixed;
-    top: 70px;
+    top: 50px;
     left: 0;
     width: 100%;
-    min-height: calc(100vh - 70px);
-    max-height: calc(100vh - 70px);
+    min-height: calc(100vh - 50px);
+    max-height: calc(100vh - 50px);
     background-color: var(--black-6);
     z-index: 99;
     opacity: 0;
     animation: opacit-1 0.3s ease forwards;
 
     @media (min-width: 768px) {
-        top: 80px;
-        min-height: calc(100vh - 80px);
-        max-height: calc(100vh - 80px);
+        top: 50px;
+        min-height: calc(100vh - 50px);
+        max-height: calc(100vh - 50px);
     }
 
     @media (min-width: 992px) {
-        top: 100px;
-        min-height: calc(100vh - 100px);
-        max-height: calc(100vh - 100px);
+        top: 60px;
+        min-height: calc(100vh - 60px);
+        max-height: calc(100vh - 60px);
+    }
+    @media (min-width: 1200px){
+        display: none;
     }
 }
 

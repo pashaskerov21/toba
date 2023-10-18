@@ -1,61 +1,3 @@
-// .search-middle{
-//     $max-width: 350px;
-//     $max-width-lg: 450px;
-//     $max-width-xxl: 560px;
-//     $min-height: 30px;
-//     $min-height-lg: 50px;
-//     $min-height-xxl: 56px;
-//     $bg-color: #541AA6;
-//     $border-radius: 5px;
-//     $input-color: #C7A2FB;
-//     $input-fonst-size: 16px;
-
-
-//     width: 100%;
-//     max-width: $max-width;
-//     min-height: $min-height;
-//     background-color: $bg-color;
-//     border-radius: $border-radius;
-//     position: relative;
-//     @include row-center;
-//     @media (min-width: 992px){
-//         max-width: $max-width-lg;
-//         min-height: $min-height-lg;
-//     }
-//     @media (min-width: 1400px){
-//         max-width: $max-width-xxl;
-//         min-height: $min-height-xxl;
-//         padding: 0 15px;
-//     }
-//     form{
-//         width: 100%;
-//         position: relative;
-//         input{
-//             width: 100%;
-//             padding: 12px;
-//             background-color: transparent;
-//             border: none;
-//             color: $input-color;
-//             font-size: $input-fonst-size;
-//             padding-right: 30px;
-//             &::placeholder{
-//                 color: $input-color;
-//                 font-size: $input-fonst-size;
-//             }
-//         }
-//         button{
-//             position: absolute;
-//             top: 50%;
-//             right: 10px;
-//             transform: translateY(-50%);
-//             background-color: $bg-color;
-//             cursor: pointer;
-//         }
-//     }
-
-// }
-
-
 .search {
     $form-bg-color: #541AA6;
     $input-color: #C7A2FB;
@@ -107,14 +49,14 @@
         position: relative;
         border-radius: 5px;
         @media (min-width: 1200px){
-            min-height: 56px;
+            min-height: 40px;
             @include row-center;
         }
         input {
             border: none;
             background-color: transparent;
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             color: $input-color;
             font-size: $input-fonst-size;
             padding-right: 30px;

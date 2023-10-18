@@ -1,15 +1,15 @@
 nav.top-nav {
     $bg-color: var(--bg-color-1);
-    $padding-y: 12px;
+    $padding-y: 11px;
     $logo-width-sm: 80px;
-    $logo-width-md: 100px;
-    $logo-width-lg: 140px;
-    $logo-width-xxl: 160px;
+    $logo-width-md: 90px;
+    $logo-width-lg: 110px;
+    $logo-width-xxl: 130px;
 
-    $min-height-sm: 60px;
-    $min-height-md: 70px;
-    $min-height-lg: 80px;
-    $min-height-xl: 90px;
+    $min-height-sm: 50px;
+    $min-height-md: 50px;
+    $min-height-lg: 60px;
+    $min-height-xl: 60px;
 
 
 
@@ -53,6 +53,7 @@ nav.top-nav {
             height: 100%;
             max-height: 54px;
             object-fit: contain;
+            display: block
         }
     }
 

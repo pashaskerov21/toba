@@ -28,27 +28,51 @@ section{
     }
     &.wishlist{
         @include make-section(0,20px,20px);
+        @media (min-width: 1400px){
+            padding: 40px 0;
+        }
     }
     &.comparisons{
         @include make-section(0,20px,20px);
+        @media (min-width: 1400px){
+            padding: 40px 0;
+        }
     }
     &.basket{
         @include make-section(0,20px,20px);
+        @media (min-width: 1400px){
+            padding: 40px 0;
+        }
     }
     &.basket-form{
         @include make-section(0,20px,20px);
+        @media (min-width: 1400px){
+            padding: 40px 0;
+        }
     }
     &.login{
         @include make-section(0,20px,20px);
+        @media (min-width: 1400px){
+            padding: 40px 0;
+        }
     }
     &.register{
         @include make-section(0,20px,20px);
+        @media (min-width: 1400px){
+            padding: 40px 0;
+        }
     }
     &.orders{
         @include make-section(0,20px,20px);
+        @media (min-width: 1400px){
+            padding: 40px 0;
+        }
     }
     &.about{
         @include make-section(0,20px,20px);
+        @media (min-width: 1400px){
+            padding: 40px 0;
+        }
     }
 
 }
