@@ -31,3 +31,27 @@
         }
     }
 }
+
+.product-category-btns{
+    width: 100%;
+    @include row-justify-start;
+    gap: 20px;
+    overflow: auto;
+    padding-bottom: 20px;
+    a,button{
+        min-width: 120px;
+        text-align: center;
+        background-color: var(--bg-color-1);
+        padding: 7px 15px;
+        @include row-center;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: 500;
+        &.active,
+        &:hover{
+            background-color: var(--bg-color-2);
+            color: var(--color-1);
+        }
+        
+    }
+}

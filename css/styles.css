@@ -351,6 +351,34 @@ main {
   transform: translateY(-9px) rotate(-45deg);
 }
 
+.product-category-btns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  overflow: auto;
+  padding-bottom: 20px;
+}
+.product-category-btns a, .product-category-btns button {
+  min-width: 120px;
+  text-align: center;
+  background-color: var(--bg-color-1);
+  padding: 7px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 500;
+}
+.product-category-btns a.active, .product-category-btns a:hover, .product-category-btns button.active, .product-category-btns button:hover {
+  background-color: var(--bg-color-2);
+  color: var(--color-1);
+}
+
 .search {
   position: absolute;
   top: -100%;
