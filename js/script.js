@@ -133,14 +133,16 @@ document.addEventListener('DOMContentLoaded', function () {
             if ($(this).parent('.sort-filter').find('.menu').hasClass('d-none')) {
                 $(this).parent('.sort-filter').find('.menu').addClass('d-none')
             } else {
-                $(this).parent('.sort-filter').find('.menu').removeClassx('d-none')
+                $(this).parent('.sort-filter').find('.menu').removeClass('d-none')
             }
         })
-        $('.sort-filter').hover(function () {
-            $(this).find('.menu').removeClass('d-none')
-        }, function () {
-            $(this).find('.menu').addClass('d-none')
-        })
+        if($(window).width() > 992){
+            $('.sort-filter').hover(function () {
+                $(this).find('.menu').removeClass('d-none')
+            }, function () {
+                $(this).find('.menu').addClass('d-none')
+            })
+        }
 
         $('.product-main-swiper .image').on('mousemove', function (e) {
             $(this).addClass('zoom');

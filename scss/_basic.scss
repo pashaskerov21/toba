@@ -70,12 +70,6 @@ img {
     display: block;
 }
 
-a,
-a:hover,
-a:active,
-a:visited {
-    text-decoration: none;
-}
 
 button {
     border: none;
@@ -84,6 +78,7 @@ button {
     padding: 0;
     margin: 0;
     transition: all $transition-duration;
+    font-family: var(--general-font);
 }
 a{
     transition: all $transition-duration;

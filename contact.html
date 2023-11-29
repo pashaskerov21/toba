@@ -58,7 +58,7 @@
                             </button>
                         </form>
                         <button class="close-button">
-                            <img src="images/icon/xmark.svg" width="14" height="16"  alt="">
+                            <img src="images/icon/xmark.svg" width="14" height="16" alt="">
                         </button>
                     </div>
                     <div class="right">
@@ -413,19 +413,19 @@
     </header>
 
     <main>
-        <section class="basket-form">
+        <section class="contact">
             <div class="container">
                 <div class="page-heading">
-                    <h1 class="title">səbət</h1>
+                    <h1 class="title">Əlaqə</h1>
                     <div class="breadcrumb">
                         <a href="#">ana səhifə</a>
                         <img src="images/icon/checron-right-gray.svg" width="8" height="12" alt="">
-                        <a href="#">səbət</a>
+                        <a href="#">Əlaqə</a>
                     </div>
                 </div>
-                <form action="#" class="general-form">
-                    <div class="inner">
-                        <div class="form-tab">
+                <div class="contact-general-wrapper">
+                    <div class="left">
+                        <form action="#" class="general-form">
                             <div class="form-component">
                                 <label>Ad, soyad*</label>
                                 <input type="text" class="form-control" placeholder="Adınız və Soyadınız">
@@ -438,109 +438,43 @@
                                 <label>Email*</label>
                                 <input type="text" class="form-control" placeholder="E-mail ünvanınızı daxil edin">
                             </div>
-                            <div class="custom-checks">
-                                <div class="custom-check">
-                                    <input type="radio" id="custom-check-shop" name="delivery" checked>
-                                    <label for="custom-check-shop">Mağazadan götür</label>
-                                </div>
-                                <div class="custom-check">
-                                    <input type="radio" id="custom-check-address" name="delivery">
-                                    <label for="custom-check-address">Ünvana çatdırılma</label>
-                                </div>
-                            </div>
                             <div class="form-component">
-                                <label>Şəhər*</label>
-                                <input type="text" class="form-control" placeholder="Bakı, Sumqayıt">
+                                <label>Mesaj</label>
+                                <textarea class="form-control" placeholder="Mesajınız"></textarea>
                             </div>
-                            <div class="form-component">
-                                <label>Ünvan*</label>
-                                <input type="text" class="form-control" placeholder="Küçə adı və ev ünvanı">
-                            </div>
-                            <div class="form-component">
-                                <label>Qeyd</label>
-                                <textarea class="form-control" placeholder="Əlavə qeydləri daxil edin"></textarea>
-                            </div>
-                            <div class="form-component">
-                                <a href="#" class="conditions">Çatdırılma şərtləri</a>
-                            </div>
-                            <div class="custom-checks">
-                                <div class="custom-check">
-                                    <input type="radio" id="custom-check-cash" name="payment">
-                                    <label for="custom-check-cash">Qapıda ödəniş</label>
+                            <button type="submit" class="submit-button">sifarişi təsdiqlə</button>
+                        </form>
+                    </div>
+                    <div class="right">
+                        <div class="contact-info">
+                            <div class="item">
+                                <div class="icon">
+                                    <img src="images/icon/phone.svg" width="40" height="40" alt="">
                                 </div>
-                                <div class="custom-check">
-                                    <input type="radio" id="custom-check-cart" name="payment" checked>
-                                    <label for="custom-check-cart">Kartla ödəniş</label>
+                                <div class="label">+994 55 555 55 55</div>
+                            </div>
+                            <div class="item">
+                                <div class="icon">
+                                    <img src="images/icon/envelope.svg" width="40" height="40" alt="">
                                 </div>
+                                <div class="label">info@mail.com</div>
+                            </div>
+                            <div class="item">
+                                <div class="icon">
+                                    <img src="images/icon/location.svg" width="40" height="40" alt="">
+                                </div>
+                                <div class="label">Baku, Azerbaijan</div>
                             </div>
                         </div>
-                        <div class="form-tab">
-                            <div class="basket-information">
-                                <div class="row title">
-                                    <h2>Məlumatlar</h2>
-                                    <a href="#">Edit</a>
-                                </div>
-                                <div class="products">
-                                    <div class="row product">
-                                        <div class="content">
-                                            <a href="#" class="image">
-                                                <img src="images/product/cart/img-1.jpg" width="180" height="110"
-                                                    alt="">
-                                            </a>
-                                            <div class="info">
-                                                <h3 class="name"><a href="#">Ultra 1 velosiped</a></h3>
-                                                <span class="code">AH3647Z</span>
-                                            </div>
-                                        </div>
-                                        <div class="price">
-                                            <span>1.900₼</span>
-                                        </div>
-                                    </div>
-                                    <div class="row product">
-                                        <div class="content">
-                                            <div class="image">
-                                                <img src="images/product/cart/img-1.jpg" width="180" height="110"
-                                                    alt="">
-                                            </div>
-                                            <div class="info">
-                                                <h3 class="name"><a href="#">Ultra 1 velosiped</a></h3>
-                                                <span class="code">AH3647Z</span>
-                                            </div>
-                                        </div>
-                                        <div class="price">
-                                            <span>1900.00₼</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="basket-result">
-                                    <div class="line">
-                                        <span>Məhsul:</span>
-                                        <span>2370.00 ₼</span>
-                                    </div>
-                                    <div class="line">
-                                        <span>Çatdırılma:</span>
-                                        <span>7.00 ₼</span>
-                                    </div>
-                                    <div class="line">
-                                        <span>Endirim:</span>
-                                        <span>0.00 ₼</span>
-                                    </div>
-                                    <div class="line">
-                                        <span>Cəmi qiymət:</span>
-                                        <span>2377.00 ₼</span>
-                                    </div>
-                                </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" checked style="background-image: url('images/icon/check-2.svg');">
-                                    <label for="">Qeydiyyatı təsdiqləməklə mən <a href="#">istifadə şərtlərini</a> qəbul edirəm</label>
-                                </div>
-                                <div class="confirm">
-                                    <button type="submit" class="submit-button">göndər</button>
-                                </div>
-                            </div>
+                        <div class="social-icons">
+                            <a href="#"><img src="images/icon/social/facebook.svg" width="20" height="20" alt=""></a>
+                            <a href="#"><img src="images/icon/social/linkedin.svg" width="20" height="20" alt=""></a>
+                            <a href="#"><img src="images/icon/social/twitter.svg" width="20" height="20" alt=""></a>
+                            <a href="#"><img src="images/icon/social/instagram.svg" width="20" height="20" alt=""></a>
+                            <a href="#"><img src="images/icon/social/youtube.svg" width="20" height="20" alt=""></a>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </section>
     </main>

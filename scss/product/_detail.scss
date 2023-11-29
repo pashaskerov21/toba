@@ -401,6 +401,9 @@
                     &.active{
                         background-color: var(--color-1);
                         color: var(--white);
+                        &:hover{
+                            color: var(--white) !important;
+                        }
                         .icon{
                             img{
                                 &:first-child{

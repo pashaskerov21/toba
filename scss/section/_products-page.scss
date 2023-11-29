@@ -1,6 +1,7 @@
 .products-general-wrapper{
     width: 100%;
     @include column-center;
+    gap: 30px;
     @media (min-width: 992px){
         @include row-between;
         align-items: flex-start;
