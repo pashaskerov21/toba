@@ -1,5 +1,6 @@
 section.contact{
     .contact-general-wrapper{
+        padding: 30px 0;
         width: 100%;
         @include column-center;
         gap: 40px;
@@ -15,6 +16,9 @@ section.contact{
             @media (min-width: 1200px){
                 width: 48%;
             }
+        }
+        .general-form{
+            padding: 0;
         }
         .right{
             background-color: var(--color-1);
@@ -34,6 +38,7 @@ section.contact{
                         width: 60px;
                         height: 60px;
                         margin-bottom: 10px;
+                        @include row-center;
                         img{
                             object-fit: contain;
                         }

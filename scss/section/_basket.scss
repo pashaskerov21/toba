@@ -180,27 +180,15 @@
             position: relative;
             border: 3px solid transparent;
             transition: all 0.3s;
-            &::after{
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border: 3px solid var(--color-1);
-                border-radius: 10px;
-                z-index: -1;
-                user-select: none;
-                pointer-events: none;
-                transform: scale(1.3);
-                opacity: 0;
-                transition: all 0.3s;
-            }
             &:hover{
+                border-color: var(--color-1);
                 background-color: transparent;
                 color: var(--color-1);
-                &::after{
-                    opacity: 1;
-                    transform: scale(1);
-                }
+                transform: scale(0.95);
+            }
+            &:active{
+                background-color: var(--color-1);
+                color: var(--white);
             }
         }
     }

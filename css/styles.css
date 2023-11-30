@@ -736,6 +736,7 @@ main {
   transition: all 0.3s;
   position: relative;
   border: 3px solid transparent;
+  overflow: hidden;
 }
 @media (min-width: 992px) {
   .general-form .submit-button.right {
@@ -743,30 +744,15 @@ main {
     align-self: flex-end;
   }
 }
-.general-form .submit-button::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 3px solid var(--color-1);
-  border-radius: 10px;
-  z-index: -1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  pointer-events: none;
-  transform: scale(1.15);
-  opacity: 0;
-  transition: all 0.3s;
-}
 .general-form .submit-button:hover {
+  border-color: var(--color-1);
   background-color: transparent;
   color: var(--color-1);
-  font-weight: 600;
+  transform: scale(0.95);
 }
-.general-form .submit-button:hover::after {
-  opacity: 1;
-  transform: scale(1);
+.general-form .submit-button:active {
+  background-color: var(--color-1);
+  color: var(--white);
 }
 .general-form .form-check {
   width: 100%;
@@ -2230,6 +2216,9 @@ footer .footer-bottom .container .inner .social-icons a:last-child {
   cursor: pointer;
   text-transform: capitalize;
   transition: all 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .product-detail-grid .product-content .product-confirm-cart .favorite-button .icon {
   margin-right: 10px;
@@ -3425,29 +3414,15 @@ section.services .services-wrapper .service-cart.bg-cover:hover {
   border: 3px solid transparent;
   transition: all 0.3s;
 }
-.basket-bottom .basket-confirm .confirm-button::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 3px solid var(--color-1);
-  border-radius: 10px;
-  z-index: -1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  pointer-events: none;
-  transform: scale(1.3);
-  opacity: 0;
-  transition: all 0.3s;
-}
 .basket-bottom .basket-confirm .confirm-button:hover {
+  border-color: var(--color-1);
   background-color: transparent;
   color: var(--color-1);
+  transform: scale(0.95);
 }
-.basket-bottom .basket-confirm .confirm-button:hover::after {
-  opacity: 1;
-  transform: scale(1);
+.basket-bottom .basket-confirm .confirm-button:active {
+  background-color: var(--color-1);
+  color: var(--white);
 }
 
 section.basket-form .basket-information {
@@ -3730,6 +3705,7 @@ section.about .about-altcontent .text ul {
 }
 
 section.contact .contact-general-wrapper {
+  padding: 30px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -3761,6 +3737,9 @@ section.contact .contact-general-wrapper .right {
     width: 48%;
   }
 }
+section.contact .contact-general-wrapper .general-form {
+  padding: 0;
+}
 section.contact .contact-general-wrapper .right {
   background-color: var(--color-1);
   color: var(--white);
@@ -3788,6 +3767,10 @@ section.contact .contact-general-wrapper .right .contact-info .item .icon {
   width: 60px;
   height: 60px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 section.contact .contact-general-wrapper .right .contact-info .item .icon img {
   -o-object-fit: contain;

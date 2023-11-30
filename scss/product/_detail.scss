@@ -441,6 +441,7 @@
                 cursor: pointer;
                 text-transform: capitalize;
                 transition: all 0.2s;
+                user-select: none;
                 .icon{
                     margin-right: 10px;
                     img{
