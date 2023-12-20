@@ -9,11 +9,31 @@ header{
             width: 100%;
             @include row-between;
         }
+        &.top-nav{
+            &.fixed{
+                @media (max-width: 1200px){
+                    position: fixed !important;
+                    top: 0;
+                    left: 0;
+                    animation: fix-nav 0.5s ease forwards;
+                }
+            }
+        }
+        &.bottom-nav{
+            &.fixed{
+                @media (min-width: 1200px){
+                    position: fixed !important;
+                    top: 0;
+                    left: 0;
+                    animation: fix-nav 0.5s ease forwards;
+                }
+            }
+        }
         &.fixed-top{
             position: fixed !important;
             top: 0;
             left: 0;
-            animation: fix-nav 0.5s ease forwards
+            animation: fix-nav 0.5s ease forwards;
         }
     }
 }

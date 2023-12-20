@@ -12,10 +12,38 @@
         width: 100%;
         padding: 0 $card-padding-x;
     }
+    .badges{
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        z-index: 10;
+        @include row-center;
+        gap: 5px;
+        margin-bottom: 10px;
+        .badge{
+            background-color: var(--bg-color-1);
+            color: #fff;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 3px 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            @media (min-width: 768px){
+                font-size: 14px;
+                right: 20px;
+            }
+            &.secondary{
+                background-color: var(--bg-color-2);
+                color: rgba($color: #000000, $alpha: 0.6)
+            }
+        }
+    }
     .image{
         width: 100%;
         height: 200px;
         position: relative;
+        z-index: 1;
         @media (min-width: 768px){
             height: 280px;
         }
@@ -36,6 +64,7 @@
             @include row-center;
             opacity: 0;
             transition: all 0.2s;
+            z-index: 5;
             a.detail-btn{
                 width: 70%;
                 max-width: 190px;
@@ -58,6 +87,7 @@
         width: 100%;
         @include column-align-start;
         padding: 15px 0;
+        position: relative;
         .code{
             color: $product-code-color;
             font-size: 16px;

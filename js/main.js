@@ -33,6 +33,11 @@ document.addEventListener('DOMContentLoaded', function () {
             let menuStatus = $('.menu-button').hasClass('active');
             $('body').css('overflow',`${menuStatus ? 'hidden' : 'visible'}`);
         });
+        window.addEventListener('resize', function(){
+            if($(window).width() > 1200){
+                $('body').css('overflow', 'visible')
+            }
+        })
 
         $('.search-button').click(function () {
             $('.search').toggleClass('active')
@@ -87,14 +92,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         // product card button
+        $('.general-icons .basket .badge').html($('.basket-button.active').length)
+        $('.general-icons .compare .badge').html($('.compare-button.active').length)
+        $('.general-icons .wishlist .badge').html($('.favorite-button.active').length)
+
         $('.basket-button').click(function () {
             $(this).addClass('active');
+            $('.general-icons .basket .badge').html($('.basket-button.active').length)
         })
         $('.compare-button').click(function () {
             $(this).toggleClass('active')
+            $('.general-icons .compare .badge').html($('.compare-button.active').length)
         })
         $('.favorite-button').click(function () {
             $(this).toggleClass('active')
+            $('.general-icons .wishlist .badge').html($('.favorite-button.active').length)
         })
 
 
@@ -197,6 +209,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+
+
+
         // product amount decrement button func
         $('.product-amount button.decrement').click(function () {
             let input = $(this).parent('.product-amount').find('input');
@@ -208,6 +226,28 @@ document.addEventListener('DOMContentLoaded', function () {
                 value -= 1;
             }
             input.val(value);
+            // let productID = $(this).closest('tr').data('product-id');
+            if (productID) {
+                let productPrice = $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price span`).text();
+                let total = Number(productPrice) * value;
+                $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price-total span`).text(total.toFixed(2))
+            }
+
+            // // basket result total calculate
+            let generalProductTotalValue = 0;
+            let generalBasketTotalValue = 0;
+            let basketDeliveryValue = Number($('.basket-result .delivery-price').text());
+            let basketDiscountValue = Number($('.basket-result .discount-price').text());
+            $('.basket-table-wrapper .product-price-total span').each(function () {
+                let value = Number($(this).text());
+                if (!isNaN(value)) {
+                    generalProductTotalValue += value;
+                }
+                generalBasketTotalValue = generalProductTotalValue + basketDeliveryValue - basketDiscountValue;
+                console.log(value)
+                $('.basket-result .product-total').text(generalProductTotalValue.toFixed(2));
+                $('.basket-result .general-total-price').text(generalBasketTotalValue.toFixed(2));
+            })
         })
         // product amount increment button func
         $('.product-amount button.increment').click(function () {
@@ -218,6 +258,88 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             value += 1;
             input.val(value);
+            let productID = $(this).closest('tr').data('product-id');
+            if (productID) {
+                let productPrice = $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price span`).text();
+                let total = Number(productPrice) * value;
+                $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price-total span`).text(total.toFixed(2))
+            }
+
+            // // basket result total calculate
+            let generalProductTotalValue = 0;
+            let generalBasketTotalValue = 0;
+            let basketDeliveryValue = Number($('.basket-result .delivery-price').text());
+            let basketDiscountValue = Number($('.basket-result .discount-price').text());
+            $('.basket-table-wrapper .product-price-total span').each(function () {
+                let value = Number($(this).text());
+                if (!isNaN(value)) {
+                    generalProductTotalValue += value;
+                }
+                generalBasketTotalValue = generalProductTotalValue + basketDeliveryValue - basketDiscountValue;
+                console.log(value)
+                $('.basket-result .product-total').text(generalProductTotalValue.toFixed(2));
+                $('.basket-result .general-total-price').text(generalBasketTotalValue.toFixed(2));
+            })
         })
+
+        // default set value
+        $('.product-amount input').each(function () {
+            let value = $(this).val();
+            if (!isNaN(value)) {
+                let productID = $(this).closest('tr').data('product-id');
+                if (productID) {
+                    let productPrice = $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price span`).text();
+                    let total = Number(productPrice) * value;
+                    $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price-total span`).text(total.toFixed(2))
+                }
+            }
+        })
+
+        // product amount oninput func
+        $('.product-amount input').on('input', function () {
+            let value = $(this).val();
+            if (!isNaN(value)) {
+                let productID = $(this).closest('tr').data('product-id');
+                if (productID) {
+                    let productPrice = $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price span`).text();
+                    let total = Number(productPrice) * value;
+                    $(`.basket-table-wrapper tbody tr[data-product-id="${productID}"] .product-price-total span`).text(total.toFixed(2))
+                }
+            }
+
+        //     // basket result total calculate
+            let generalProductTotalValue = 0;
+            let generalBasketTotalValue = 0;
+            let basketDeliveryValue = Number($('.basket-result .delivery-price').text());
+            let basketDiscountValue = Number($('.basket-result .discount-price').text());
+            $('.basket-table-wrapper .product-price-total span').each(function () {
+                let value = Number($(this).text());
+                if (!isNaN(value)) {
+                    generalProductTotalValue += value;
+                }
+                generalBasketTotalValue = generalProductTotalValue + basketDeliveryValue - basketDiscountValue;
+                console.log(value)
+                $('.basket-result .product-total').text(generalProductTotalValue.toFixed(2));
+                $('.basket-result .general-total-price').text(generalBasketTotalValue.toFixed(2));
+            })
+        })
+
+        // basket result total calculate
+        let generalProductTotalValue = 0;
+        let generalBasketTotalValue = 0;
+        let basketDeliveryValue = Number($('.basket-result .delivery-price').text());
+        let basketDiscountValue = Number($('.basket-result .discount-price').text());
+        $('.basket-table-wrapper .product-price-total span').each(function () {
+            let value = Number($(this).text());
+            if (!isNaN(value)) {
+                generalProductTotalValue += value;
+            }
+            generalBasketTotalValue = generalProductTotalValue + basketDeliveryValue - basketDiscountValue;
+            console.log(value)
+            $('.basket-result .product-total').text(generalProductTotalValue.toFixed(2));
+            $('.basket-result .general-total-price').text(generalBasketTotalValue.toFixed(2));
+        })
+
+
     })
 })

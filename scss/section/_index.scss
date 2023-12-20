@@ -80,6 +80,12 @@ section{
             padding: 40px 0;
         }
     }
+    &.page-404{
+        @include make-section(0,20px,20px);
+        @media (min-width: 1400px){
+            padding: 40px 0;
+        }
+    }
 
 }
 
@@ -98,3 +104,4 @@ section{
 @import 'order';
 @import 'about';
 @import 'contact';
+@import 'page-404';

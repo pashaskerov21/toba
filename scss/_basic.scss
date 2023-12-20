@@ -100,3 +100,14 @@ main{
     width: 100%;
     z-index: 0;
 }
+
+.alert-warning{
+    width: 100%;
+    @include row-center;
+    background-color: var(--bg-color-2);
+    color: var(--color-1);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px;
+    margin-bottom: 10px;
+}
