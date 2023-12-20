@@ -11,15 +11,15 @@
     .content{
         width: 100%;
         padding: 0 $card-padding-x;
+        position: relative;
     }
     .badges{
         position: absolute;
         top: 20px;
-        right: 15px;
+        right: 20px;
         z-index: 10;
         @include row-center;
         gap: 5px;
-        margin-bottom: 10px;
         .badge{
             background-color: var(--bg-color-1);
             color: #fff;
@@ -31,7 +31,6 @@
             font-weight: 600;
             @media (min-width: 768px){
                 font-size: 14px;
-                right: 20px;
             }
             &.secondary{
                 background-color: var(--bg-color-2);

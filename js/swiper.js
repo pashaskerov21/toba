@@ -1,9 +1,9 @@
 const bannerSwiper = new Swiper('.banner-swiper', {
     loop: true,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 4000,
+    //     disableOnInteraction: false,
+    // },
 });
 const partnerSwiper = new Swiper('.partner-swiper', {
     loop: true,
