@@ -5,6 +5,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     $(document).ready(function () {
 
+        // image size
+        function setProductCartHeight() {
+            let cartWidth = $('.product-card').innerWidth();
+            let detailImageWidth = $('.product-main-swiper .image').innerWidth();
+
+            let imageHeight = cartWidth - 20;
+            $('.product-card .image').css('height', imageHeight + 'px');
+            $('.product-main-swiper .image').css('height', detailImageWidth + 'px');
+        }
+        $(window).on('load resize', function() {
+            setProductCartHeight();
+        });
+
         window.addEventListener('scroll', function () {
             if (this.scrollY > 300) {
                 $('header .top-nav').addClass('fixed');

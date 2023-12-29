@@ -1,3 +1,4 @@
+/*product detail start*/
 .product-detail-grid {
     width: 100%;
     @include column-center;
@@ -32,7 +33,7 @@
                 .image {
                     width: 100%;
                     max-width: 520px;
-                    height: 200px;
+                    min-height: 200px;
                     display: block;
                     background-repeat: no-repeat;
                     background-position: center;
@@ -49,15 +50,6 @@
                             }
                         }
                     }
-
-                    @media (min-width: 768px) {
-                        height: 300px;
-                    }
-
-                    @media (min-width: 1200px) {
-                        height: 350px;
-                    }
-
                     img {
                         display: block;
                         width: 100%;
@@ -71,8 +63,8 @@
             &.product-thumb-swiper {
                 .image {
                     width: 100%;
-                    max-width: 160px;
-                    height: 100px;
+                    width: 150px;
+                    height: 150px;
 
                     img {
                         width: 100%;
@@ -472,3 +464,4 @@
         }
     }
 }
+/*product detail end*/

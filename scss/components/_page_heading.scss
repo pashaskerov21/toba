@@ -12,6 +12,7 @@
     }
     .breadcrumb{
         @include row-justify-start;
+        flex-wrap: wrap;
         img{
             margin: 0 5px;
             transform: scale(0.7);

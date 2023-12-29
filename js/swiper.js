@@ -1,9 +1,17 @@
 const bannerSwiper = new Swiper('.banner-swiper', {
     loop: true,
-    // autoplay: {
-    //     delay: 4000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
 });
 const partnerSwiper = new Swiper('.partner-swiper', {
     loop: true,
