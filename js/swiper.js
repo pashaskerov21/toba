@@ -11,7 +11,7 @@ const bannerSwiper = new Swiper('.banner-swiper', {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
+    },
 });
 const partnerSwiper = new Swiper('.partner-swiper', {
     loop: true,

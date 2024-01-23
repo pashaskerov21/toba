@@ -465,3 +465,43 @@
     }
 }
 /*product detail end*/
+
+/*product parameter start*/
+.product-parameters{
+    width: 100%;
+    border: 1px solid rgba($color: #000000, $alpha: 0.1);
+    
+    @include column-center;
+    .parameter-title{
+        width: 100%;
+        @include row-justify-start;
+        text-align: start;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+        padding: 15px;
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--color-1);
+        @media (width >= 992px){
+            padding: 15px 20px;
+            font-size: 22px;
+        }
+    }
+    .parameter-row{
+        width: 100%;
+        @include row-justify-start;
+        padding: 15px;
+        gap: 20px;
+        text-align: start;
+        @media (width >= 992px){
+            padding: 15px 20px;
+        }
+        .parameter-key{
+            font-weight: 500;
+            width: 50%;
+        }
+        .parameter-value{
+            width: 50%;
+        }
+    }
+}
+/*product parameter end*/

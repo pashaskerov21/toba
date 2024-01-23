@@ -23,7 +23,11 @@ section.basket-form{
                 }
                 .image{
                     margin-right: 15px;
+                    width: 150px;
+                    height: 150px;
                     img{
+                        width: 100%;
+                        height: 100%;
                         object-fit: contain;
                     }
                 }

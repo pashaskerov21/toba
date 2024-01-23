@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 $('.general-icons.mobile').addClass('d-xl-none');
 
             }
-        })
+        });
 
         // menu
         $('.menu-button').click(function () {
